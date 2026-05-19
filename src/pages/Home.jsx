@@ -8,7 +8,7 @@ const Home = () => {
 
   // Images récupérées pour le design
   const heroBg = "/asshop1.JPG"; // Image de fond immersive pour le hero
-  const catShoes = "/asshop2.JPG"; // Image pour la catégorie chaussures
+  const catShoes = "/asshop5.JPG"; // Image pour la catégorie chaussures
   const catClothes = "/asshop3.JPG"; // Image pour la catégorie vêtements
   const catAcc = "/asshop4.JPG"; // Image pour la catégorie accessoires
 
@@ -17,7 +17,7 @@ const Home = () => {
       
       {/* --- NAVBAR --- */}
       <nav className="fixed w-full z-[100] px-6 py-5 flex justify-between items-center bg-black/40 backdrop-blur-xl border-b border-white/5">
-        <div className="text-3xl font-black tracking-tighter italic">AS<span className="text-primary-cyan">SHOP</span></div>
+        <div className="text-3xl font-black tracking-tighter italic"><img src="/asshop2.JPG" alt="" /><span className="text-primary-cyan"></span></div>
         
         <div className="hidden md:flex gap-10 font-bold uppercase text-xs tracking-[0.2em]">
           {['New Drop', 'Sneakers', 'Apparel', 'Accessories'].map(item => (
