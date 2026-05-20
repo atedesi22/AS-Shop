@@ -21,25 +21,6 @@ const Home = () => {
     <div className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
       
       {/* --- MOBILE DRAWER --- */}
-      {/* <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div 
-            initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
-            className="fixed inset-0 z-[200] bg-black p-8 flex flex-col justify-between"
-          >
-            <div className="flex justify-between items-center">
-              <span className="text-2xl font-black tracking-tighter">AS SHOP</span>
-              <X onClick={() => setIsMenuOpen(false)} size={32} className="text-primary-cyan" />
-            </div>
-            <div className="flex flex-col gap-8 text-5xl font-black uppercase italic">
-              {['Accueil', 'Boutique', 'Marques', 'Contact'].map(item => <a key={item} href="#">{item}</a>)}
-            </div>
-            <div className="flex gap-6 text-primary-cyan">
-             
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence> */}
 
       {/* --- HERO SECTION IMMERSIVE --- */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -60,7 +41,7 @@ const Home = () => {
             STEP UP <br /> <span className="text-transparent border-t-2 border-b-2 border-white/20 [-webkit-text-stroke:1px_white]">YOUR GAME</span>
           </motion.h1>
           <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.6 }} className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary-cyan text-white px-12 py-5 rounded-full font-black uppercase tracking-widest hover:shadow-[0_0_40px_rgba(0,163,255,0.6)] transition-all">Acheter Maintenant</button>
+            <button href='/shop' className="bg-primary-cyan text-white px-12 py-5 rounded-full font-black uppercase tracking-widest hover:shadow-[0_0_40px_rgba(0,163,255,0.6)] transition-all">Acheter Maintenant</button>
             <button className="bg-white/10 backdrop-blur-md text-white px-12 py-5 rounded-full font-black uppercase border border-white/20 hover:bg-white hover:text-black transition-all">Collections</button>
           </motion.div>
         </div>
