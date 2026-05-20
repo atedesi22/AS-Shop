@@ -11,7 +11,7 @@ const ProductCard = ({ name, price, image }) => {
       {/* Image Produit */}
       <div className="h-64 bg-neutral-800 relative overflow-hidden">
         <img 
-          src={image || "/asshop1.JPG"} 
+          src={image || "/asshop5.JPG"} 
           alt={name} 
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />

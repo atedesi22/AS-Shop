@@ -2,22 +2,35 @@ import React, { useState } from 'react';
 import { ShoppingBag, Search, User, Menu, X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProductCard from '../components/ProductCard';
+import BottomNav from '../components/BottomNav';
+// import logoAsShop from '../assets/asshop2.JPG';
+
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Images récupérées pour le design
-  const heroBg = "/asshop1.JPG"; // Image de fond immersive pour le hero
-  const catShoes = "/asshop5.JPG"; // Image pour la catégorie chaussures
-  const catClothes = "/asshop3.JPG"; // Image pour la catégorie vêtements
-  const catAcc = "/asshop4.JPG"; // Image pour la catégorie accessoires
+        // import logoAsShop from '../assets/asshop2.JPG';
+        // import heroBg from '../assets/asshop1.JPG';
+        // import catShoes from '../assets/asshop5.JPG';
+        // import catClothes from '../assets/asshop3.JPG';
+        // import catAcc from '../assets/asshop4.JPG';
+
 
   return (
     <div className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
       
       {/* --- NAVBAR --- */}
       <nav className="fixed w-full z-[100] px-6 py-5 flex justify-between items-center bg-black/40 backdrop-blur-xl border-b border-white/5">
-        <div className="text-3xl font-black tracking-tighter italic"><img src="/asshop2.JPG" alt="" /><span className="text-primary-cyan"></span></div>
+        {/* --- LOGO À LA PLACE DU TEXTE --- */}
+        <a href="/" className="group block h-12">
+          <img 
+        //   src='#'
+            src='/asshop2.JPG' // Utilisation de la variable importée ici
+            alt="AS SHOP - Logo Streetwear Douala" 
+            className="h-full w-auto object-contain transition-transform group-hover:scale-105"
+          />
+        </a>
         
         <div className="hidden md:flex gap-10 font-bold uppercase text-xs tracking-[0.2em]">
           {['New Drop', 'Sneakers', 'Apparel', 'Accessories'].map(item => (
@@ -59,7 +72,7 @@ const Home = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image avec Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src={heroBg} alt="Hero" className="w-full h-full object-cover scale-110 opacity-60" />
+          <img src='/asshop1.JPG' alt="Hero" className="w-full h-full object-cover scale-110 opacity-60" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent" />
         </div>
 
@@ -91,9 +104,9 @@ const Home = () => {
       <section className="container mx-auto px-6 py-32">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { name: 'Footwear', img: catShoes, tag: 'Sneakers' },
-            { name: 'Apparel', img: catClothes, tag: 'Hoodies/Tees' },
-            { name: 'Extras', img: catAcc, tag: 'Caps/Bags' }
+            { name: 'Footwear', img: '/asshop5.JPG', tag: 'Sneakers' },
+            { name: 'Apparel', img: '/asshop3.JPG', tag: 'Hoodies/Tees' },
+            { name: 'Extras', img: '/asshop4.JPG', tag: 'Caps/Bags' }
           ].map((cat, i) => (
             <motion.div 
               key={i} whileHover={{ y: -10 }}
@@ -117,14 +130,14 @@ const Home = () => {
           <h2 className="text-5xl font-black uppercase italic">Best <span className="text-primary-cyan">Sellers</span></h2>
           <a href="#" className="text-primary-cyan font-bold hover:underline">Voir tout</a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
           <ProductCard name="Jordan 4 Black Cat" price="165 000 FCFA" />
           <ProductCard name="Nike Dunk Low Panda" price="85 000 FCFA" />
           <ProductCard name="Yeezy Boost 350" price="145 000 FCFA" />
           <ProductCard name="Air Force 1 White" price="75 000 FCFA" />
         </div>
       </section>
-
+          <BottomNav />
     </div>
   );
 };

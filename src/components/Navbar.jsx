@@ -22,7 +22,7 @@ const Navbar = () => {
           <Search className="w-6 h-6 cursor-pointer hover:text-[#00A3FF] transition" />
           <ShoppingBag className="w-6 h-6 cursor-pointer hover:text-[#00A3FF] transition" />
           <User className="w-6 h-6 cursor-pointer hover:text-[#00A3FF] transition" />
-          <Menu className="md:hidden w-6 h-6 cursor-pointer" />
+          {/* <Menu className="md:hidden w-6 h-6 cursor-pointer" /> */}
         </div>
       </div>
     </nav>
