@@ -20,34 +20,8 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
       
-      {/* --- NAVBAR --- */}
-      <nav className="fixed w-full z-[100] px-6 py-5 flex justify-between items-center bg-black/40 backdrop-blur-xl border-b border-white/5">
-        {/* --- LOGO À LA PLACE DU TEXTE --- */}
-        <a href="/" className="group block h-12">
-          <img 
-        //   src='#'
-            src='/asshop2.JPG' // Utilisation de la variable importée ici
-            alt="AS SHOP - Logo Streetwear Douala" 
-            className="h-full w-auto object-contain transition-transform group-hover:scale-105"
-          />
-        </a>
-        
-        <div className="hidden md:flex gap-10 font-bold uppercase text-xs tracking-[0.2em]">
-          {['New Drop', 'Sneakers', 'Apparel', 'Accessories'].map(item => (
-            <a key={item} href="#" className="hover:text-primary-cyan transition-colors">{item}</a>
-          ))}
-        </div>
-
-        <div className="flex items-center gap-6">
-          <Search size={20} className="cursor-pointer hover:text-primary-cyan hidden sm:block" />
-          <ShoppingBag size={20} className="cursor-pointer hover:text-primary-cyan" />
-          <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-primary-cyan"><Menu /></button>
-          <button className="hidden md:block bg-white text-black px-5 py-2 rounded-full text-xs font-black uppercase hover:bg-primary-cyan hover:text-white transition-all">Connexion</button>
-        </div>
-      </nav>
-
       {/* --- MOBILE DRAWER --- */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
             initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
@@ -61,12 +35,11 @@ const Home = () => {
               {['Accueil', 'Boutique', 'Marques', 'Contact'].map(item => <a key={item} href="#">{item}</a>)}
             </div>
             <div className="flex gap-6 text-primary-cyan">
-              {/* <Instagram /> */}
-              {/* <Facebook /> */}
+             
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       {/* --- HERO SECTION IMMERSIVE --- */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
