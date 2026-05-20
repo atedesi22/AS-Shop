@@ -5,8 +5,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 const ProductCard = ({ name, price, image }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(`Je souhaite commander : ${name} à ${price}`)}`;
+const BASE_URL = "https://as-shop-seven.vercel.app"; // Remplace par ton vrai domaine
 
+const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
+  `📦 *COMMANDE AS SHOP*\n\n` +
+  `Article : ${name}\n` +
+  `Prix : ${price}\n\n` +
+  `--------------------------\n` +
+  `Lien produit : ${BASE_URL}${image}` // WhatsApp détectera ce lien et créera l'aperçu
+)}`;
   return (
     <>
       <div className="bg-neutral-900 rounded-2xl p-4 border border-white/5 group hover:border-primary-cyan transition-all">
@@ -17,7 +24,7 @@ const ProductCard = ({ name, price, image }) => {
           onClick={() => setIsModalOpen(true)}
           className="w-full py-3 bg-white text-black font-bold rounded-lg hover:bg-primary-cyan hover:text-white transition"
         >
-          Commander
+           Commander
         </button>
       </div>
 
