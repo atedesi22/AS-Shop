@@ -41,7 +41,7 @@ const Home = () => {
             STEP UP <br /> <span className="text-transparent border-t-2 border-b-2 border-white/20 [-webkit-text-stroke:1px_white]">YOUR GAME</span>
           </motion.h1>
           <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.6 }} className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <button href='/shop' className="bg-primary-cyan text-white px-12 py-5 rounded-full font-black uppercase tracking-widest hover:shadow-[0_0_40px_rgba(0,163,255,0.6)] transition-all">Acheter Maintenant</button>
+            <button href='/shop' className="bg-primary-cyan text-white px-12 py-5 rounded-full font-black uppercase tracking-widest hover:shadow-[0_0_40px_rgba(0,163,255,0.6)] active:shadow-[0_0_40px_rgba(0,163,255,0.6)] transition-all">Acheter Maintenant</button>
             <button className="bg-white/10 backdrop-blur-md text-white px-12 py-5 rounded-full font-black uppercase border border-white/20 hover:bg-white hover:text-black transition-all">Collections</button>
           </motion.div>
         </div>
