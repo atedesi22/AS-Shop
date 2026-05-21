@@ -36,7 +36,7 @@ const Shop = () => {
       
       {/* Header Boutique */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
-        <h2 className="text-5xl font-black uppercase italic">La <span className="text-primary-cyan">Boutique</span></h2>
+        <h2 className="text-5xl font-black uppercase italic">La <span className="text-[#00A3FF]">Boutique</span></h2>
         
         {/* Barre de recherche */}
         <div className="relative w-full md:w-96">
@@ -44,7 +44,7 @@ const Shop = () => {
           <input 
             type="text"
             placeholder="Rechercher une pièce..."
-            className="w-full bg-neutral-900 border border-white/10 py-4 pl-12 pr-4 rounded-xl focus:border-primary-cyan outline-none transition"
+            className="w-full bg-neutral-900 border border-white/10 py-4 pl-12 pr-4 rounded-xl focus:border-[#00A3FF] outline-none transition"
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
@@ -56,7 +56,7 @@ const Shop = () => {
           <button 
             key={cat}
             onClick={() => setCategory(cat)}
-            className={`px-6 py-2 rounded-full font-bold uppercase text-sm border transition-all ${category === cat ? 'bg-primary-cyan border-primary-cyan' : 'bg-neutral-900 border-white/10 hover:border-white'}`}
+            className={`px-6 py-2 rounded-full font-bold uppercase text-sm border transition-all ${category === cat ? 'bg-[#00A3FF] border-[#00A3FF]' : 'bg-neutral-900 border-white/10 hover:border-white'}`}
           >
             {cat}
           </button>
@@ -71,7 +71,7 @@ const Shop = () => {
           ))}
         </div>
       ) : (
-        <div className="text-center py-20 text-light-gray">
+        <div className="text-center py-20 text-[#E0E0E0]">
           <p>Aucun produit trouvé pour "{searchTerm}"</p>
         </div>
       )}

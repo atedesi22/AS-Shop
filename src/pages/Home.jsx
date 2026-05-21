@@ -32,7 +32,7 @@ const Home = () => {
         </div>
 
         <div className="relative z-10 text-center px-4">
-          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-primary-cyan font-black tracking-[0.5em] uppercase text-sm mb-4 block">
+          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#00A3FF] font-black tracking-[0.5em] uppercase text-sm mb-4 block">
             Exclusive Streetwear
           </motion.span>
           <motion.h1 
@@ -42,7 +42,7 @@ const Home = () => {
             STEP UP <br /> <span className="text-transparent border-t-2 border-b-2 border-white/20 [-webkit-text-stroke:1px_white]">YOUR GAME</span>
           </motion.h1>
           <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.6 }} className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to='/shop' className="bg-primary-cyan text-white px-12 py-5 rounded-full font-black uppercase tracking-widest hover:shadow-[0_0_40px_rgba(0,163,255,0.6)] active:shadow-[0_0_40px_rgba(0,163,255,0.6)] transition-all">Acheter Maintenant</Link>
+            <Link to='/shop' className="bg-[#00A3FF] text-white px-12 py-5 rounded-full font-black uppercase tracking-widest hover:shadow-[0_0_40px_rgba(0,163,255,0.6)] active:shadow-[0_0_40px_rgba(0,163,255,0.6)] transition-all">Acheter Maintenant</Link>
             <button className="bg-white/10 backdrop-blur-md text-white px-12 py-5 rounded-full font-black uppercase border border-white/20 hover:bg-white hover:text-black transition-all">Collections</button>
           </motion.div>
         </div>
@@ -70,9 +70,9 @@ const Home = () => {
               <img src={cat.img} alt={cat.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
               <div className="absolute bottom-8 left-8">
-                <span className="text-primary-cyan font-bold text-xs uppercase tracking-widest">{cat.tag}</span>
+                <span className="text-[#00A3FF] font-bold text-xs uppercase tracking-widest">{cat.tag}</span>
                 <h3 className="text-4xl font-black uppercase italic">{cat.name}</h3>
-                <ArrowRight className="mt-4 text-white group-hover:text-primary-cyan transition-colors" />
+                <ArrowRight className="mt-4 text-white group-hover:text-[#00A3FF] transition-colors" />
               </div>
             </motion.div>
           ))}
@@ -82,8 +82,8 @@ const Home = () => {
       {/* --- PRODUITS VEDETTES --- */}
       <section className="container mx-auto px-6 pb-32">
         <div className="flex justify-between items-end mb-16">
-          <h2 className="text-5xl font-black uppercase italic">Best <span className="text-primary-cyan">Sellers</span></h2>
-          <a href="#" className="text-primary-cyan font-bold hover:underline">Voir tout</a>
+          <h2 className="text-5xl font-black uppercase italic">Best <span className="text-[#00A3FF]">Sellers</span></h2>
+          <a href="#" className="text-[#00A3FF] font-bold hover:underline">Voir tout</a>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
           <ProductCard name="Jordan 4 Black Cat" price="165 000 FCFA" />

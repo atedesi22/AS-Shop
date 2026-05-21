@@ -17,17 +17,17 @@ const Cart = () => {
 
   return (
     <div className="pt-24 px-6 pb-32 max-w-2xl mx-auto min-h-screen">
-      <h2 className="text-4xl font-black uppercase italic mb-10">Mon <span className="text-primary-cyan">Panier</span></h2>
+      <h2 className="text-4xl font-black uppercase italic mb-10">Mon <span className="text-[#00A3FF]">Panier</span></h2>
       
       {cart.length === 0 ? (
-        <p className="text-light-gray text-center mt-20">Votre panier est vide.</p>
+        <p className="text-[#E0E0E0] text-center mt-20">Votre panier est vide.</p>
       ) : (
         <div className="flex flex-col gap-6">
           {cart.map((item, index) => (
             <div key={index} className="flex justify-between items-center bg-neutral-900 p-4 rounded-xl border border-white/5">
               <div>
                 <h3 className="font-bold">{item.name}</h3>
-                <p className="text-primary-cyan font-bold">{item.price}</p>
+                <p className="text-[#00A3FF] font-bold">{item.price}</p>
               </div>
               <button onClick={() => removeFromCart(index)} className="text-red-500 hover:text-red-400">
                 <Trash2 size={20} />
@@ -38,7 +38,7 @@ const Cart = () => {
           <div className="mt-8 border-t border-white/10 pt-6">
             <div className="flex justify-between text-2xl font-black mb-8">
               <span>Total</span>
-              <span className="text-primary-cyan">{total.toLocaleString()} FCFA</span>
+              <span className="text-[#00A3FF]">{total.toLocaleString()} FCFA</span>
             </div>
             
             <a 

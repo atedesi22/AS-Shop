@@ -7,10 +7,10 @@ const Favorites = () => {
 
   return (
     <div className="pt-24 px-6 pb-32 max-w-4xl mx-auto min-h-screen">
-      <h2 className="text-4xl font-black uppercase italic mb-10">Vos <span className="text-primary-cyan">Favoris</span></h2>
+      <h2 className="text-4xl font-black uppercase italic mb-10">Vos <span className="text-[#00A3FF]">Favoris</span></h2>
       
       {favorites.length === 0 ? (
-        <p className="text-light-gray text-center mt-20">Aucun favori pour le moment.</p>
+        <p className="text-[#E0E0E0] text-center mt-20">Aucun favori pour le moment.</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {favorites.map((item, index) => (
@@ -20,10 +20,10 @@ const Favorites = () => {
               </div>
               <div className="flex-grow">
                 <h3 className="font-bold">{item.name}</h3>
-                <p className="text-primary-cyan font-bold">{item.price}</p>
+                <p className="text-[#00A3FF] font-bold">{item.price}</p>
               </div>
               <div className="flex flex-col gap-2">
-                <button onClick={() => addToCart(item)} className="p-2 bg-primary-cyan rounded-lg">
+                <button onClick={() => addToCart(item)} className="p-2 bg-[#00A3FF] rounded-lg">
                   <ShoppingCart size={18} />
                 </button>
                 <button onClick={() => removeFromFavorites(index)} className="p-2 bg-red-900/30 text-red-500 rounded-lg">

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { ShoppingBag, Search, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { GlobalContext } from '../context/GlobalContext';
 
 
 const linkNav = [
@@ -18,6 +19,7 @@ const animatedLink = [
 ]
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { cart } = useContext(GlobalContext);
   return (
 
     <>
@@ -29,12 +31,12 @@ const Navbar = () => {
               >
                 <div className="flex justify-between items-center">
                   <span className="text-2xl font-black tracking-tighter">AS SHOP</span>
-                  <X onClick={() => setIsMenuOpen(false)} size={32} className="text-primary-cyan" />
+                  <X onClick={() => setIsMenuOpen(false)} size={32} className="text-[#00A3FF]" />
                 </div>
                 <div className="flex flex-col gap-8 text-5xl font-black uppercase italic">
                   {animatedLink.map(item => <a key={item.label} href={item.link}>{item.label}</a>)}
                 </div>
-                <div className="flex gap-6 text-primary-cyan">
+                <div className="flex gap-6 text-[#00A3FF]">
                   {/* <Instagram /> */}
                   {/* <Facebook /> */}
                 </div>
@@ -46,25 +48,34 @@ const Navbar = () => {
             {/* --- LOGO À LA PLACE DU TEXTE --- */}
             <a href="/" className="group block h-12">
               <img 
-                src='/asshop2.JPG' // Utilisation de la variable importée ici
+                src='/logo.png' // Utilisation de la variable importée ici
                 alt="AS SHOP - Logo Streetwear Douala" 
-                className="h-full w-auto object-contain transition-transform group-hover:scale-105"
+                className="h-full w-55 object-contain transition-transform group-hover:scale-105"
               />
             </a>
             
             <div className="hidden md:flex gap-10 font-bold uppercase text-xs tracking-[0.2em]">
               {
                linkNav.map((item, index) => (
-                <a key={index} href={item.link} className="hover:text-primary-cyan transition-colors">{item.label}</a>
+                <a key={index} href={item.link} className="hover:text-[#00A3FF] transition-colors">{item.label}</a>
               ))}
             </div>
     
             <div className="flex items-center gap-6">
-              <Search size={20} className="cursor-pointer hover:text-primary-cyan hidden sm:block" />
-              <ShoppingBag size={20} className="cursor-pointer hover:text-primary-cyan" />
-<button onClick={() => setIsMenuOpen(true)} className="md:hidden text-primary-cyan">
-  <Menu />
-</button>              <button className="hidden md:block bg-white text-black px-5 py-2 rounded-full text-xs font-black uppercase hover:bg-primary-cyan hover:text-white transition-all">Connexion</button>
+              <Search size={20} className="cursor-pointer hover:text-[#00A3FF] hidden sm:block" />
+              {/* Icône Panier avec Badge */}
+        <div className="relative cursor-pointer">
+          <ShoppingBag size={20} className="hover:text-[#00A3FF]" />
+          {cart.length > 0 && (
+            <span className="absolute -top-2 -right-2 bg-[#00A3FF] text-black text-[10px] font-black w-5 h-5 flex items-center justify-center rounded-full">
+              {cart.length}
+            </span>
+          )}
+        </div>
+              <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-[#00A3FF]">
+                <Menu />
+              </button>              
+              <button className="hidden md:block bg-white text-black px-5 py-2 rounded-full text-xs font-black uppercase hover:bg-[#00A3FF] hover:text-white transition-all">Connexion</button>
             </div>
           </nav>
     </>

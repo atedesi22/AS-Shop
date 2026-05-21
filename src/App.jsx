@@ -17,10 +17,10 @@ function App() {
   return (
     <GlobalProvider>
       <Router>
-        <div className="bg-[#050505] min-h-screen text-white font-sans selection:bg-primary-cyan selection:text-black">
+        <div className="bg-[#050505] min-h-screen text-white font-sans selection:bg-[#00A3FF] selection:text-black">
           
           {/* Top Bar Promotionnelle NovaVerse */}
-          <div className="bg-primary-cyan text-[10px] text-center py-1 font-black tracking-[0.2em] uppercase cursor-pointer hover:bg-white transition-colors">
+          <div className="bg-[#00A3FF] text-[10px] text-center py-1 font-black tracking-[0.2em] uppercase cursor-pointer hover:bg-white transition-colors">
             Expérience NovaVerse activée - Connectez-vous pour synchroniser vos données
           </div>
 

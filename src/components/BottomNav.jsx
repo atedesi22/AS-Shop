@@ -43,7 +43,7 @@ const BottomNav = () => {
 };
 
 const NavItem = ({ icon, label, active }) => (
-  <button className={`flex flex-col items-center gap-1 transition-colors ${active ? 'text-primary-cyan' : 'text-white/50 hover:text-white'}`}>
+  <button className={`flex flex-col items-center gap-1 transition-colors ${active ? 'text-[#00A3FF]' : 'text-white/50 hover:text-white'}`}>
     {icon}
     <span className="text-[10px] font-bold uppercase">{label}</span>
   </button>
