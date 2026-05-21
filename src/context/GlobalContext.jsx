@@ -1,20 +1,22 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useCallback } from 'react';
 
 export const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
-  // Initialisation à partir du localStorage pour éviter de perdre les données au refresh
   const [cart, setCart] = useState(() => {
-    const savedCart = localStorage.getItem('asshop_cart');
-    return savedCart ? JSON.parse(savedCart) : [];
+    try {
+      const saved = localStorage.getItem('asshop_cart');
+      return saved ? JSON.parse(saved) : [];
+    } catch { return []; }
   });
 
   const [favorites, setFavorites] = useState(() => {
-    const savedFavs = localStorage.getItem('asshop_favorites');
-    return savedFavs ? JSON.parse(savedFavs) : [];
+    try {
+      const saved = localStorage.getItem('asshop_favorites');
+      return saved ? JSON.parse(saved) : [];
+    } catch { return []; }
   });
 
-  // Sauvegarde automatique à chaque changement
   useEffect(() => {
     localStorage.setItem('asshop_cart', JSON.stringify(cart));
   }, [cart]);
@@ -23,47 +25,48 @@ export const GlobalProvider = ({ children }) => {
     localStorage.setItem('asshop_favorites', JSON.stringify(favorites));
   }, [favorites]);
 
-  // Logique du Panier
-  const addToCart = (product) => {
-  setCart((prev) => {
-    const existingIndex = prev.findIndex(item => item.name === product.name);
-    if (existingIndex !== -1) {
-      // Si le produit existe, on augmente la quantité
-      const newCart = [...prev];
-      newCart[existingIndex].quantity += 1;
-      return newCart;
-    }
-    // Sinon, on ajoute avec quantité 1
-    return [...prev, { ...product, quantity: 1 }];
-  });
-};
+  // Logique immuable : map() garantit qu'on ne touche qu'une seule fois à l'élément
+  const addToCart = useCallback((product) => {
+    setCart((prev) => {
+      const isExisting = prev.find((item) => item.name === product.name);
+      if (isExisting) {
+        return prev.map((item) => 
+          item.name === product.name 
+            ? { ...item, quantity: item.quantity + 1 } 
+            : item
+        );
+      }
+      return [...prev, { ...product, quantity: 1 }];
+    });
+  }, []);
 
-const updateQuantity = (index, delta) => {
-  setCart((prev) => {
-    const newCart = [...prev];
-    newCart[index].quantity += delta;
-    if (newCart[index].quantity < 1) newCart[index].quantity = 1;
-    return newCart;
-  });
-};
-
-  const removeFromCart = (index) => {
+  const removeFromCart = useCallback((index) => {
     setCart((prev) => prev.filter((_, i) => i !== index));
-  };
+  }, []);
 
-  // Logique des Favoris
-  const toggleFavorite = (product) => {
+  const updateQuantity = useCallback((index, delta) => {
+    setCart((prev) => 
+      prev.map((item, i) => {
+        if (i === index) {
+          return { ...item, quantity: Math.max(1, item.quantity + delta) };
+        }
+        return item;
+      })
+    );
+  }, []);
+
+  const toggleFavorite = useCallback((product) => {
     setFavorites((prev) => {
       const isFav = prev.find((item) => item.name === product.name);
-      if (isFav) return prev.filter((item) => item.name !== product.name);
-      return [...prev, product];
+      return isFav 
+        ? prev.filter((item) => item.name !== product.name) 
+        : [...prev, product];
     });
-  };
+  }, []);
 
   return (
     <GlobalContext.Provider value={{ 
-      cart, addToCart, removeFromCart, 
-      updateQuantity, favorites, toggleFavorite 
+      cart, favorites, addToCart, removeFromCart, updateQuantity, toggleFavorite 
     }}>
       {children}
     </GlobalContext.Provider>

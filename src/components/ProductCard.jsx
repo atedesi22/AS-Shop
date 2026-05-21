@@ -7,7 +7,7 @@ const ProductCard = ({ name, price, image }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { addToCart, toggleFavorite, favorites } = useContext(GlobalContext);
   
-  const isFavorite = favorites.some((item) => item.name === name);
+  const isFavorite = favorites?.some((item) => item.name === name);
 
 const BASE_URL = "https://as-shop-seven.vercel.app"; // Remplace par ton vrai domaine
 

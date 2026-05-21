@@ -35,7 +35,10 @@ const Cart = () => {
             <div className="flex items-center gap-3 mt-2">
               <button onClick={() => updateQuantity(index, -1)} className="p-1 bg-neutral-800 rounded"><Minus size={14} /></button>
               <span className="font-bold w-6 text-center">{item.quantity}</span>
-              <button onClick={() => updateQuantity(index, 1)} className="p-1 bg-neutral-800 rounded"><Plus size={14} /></button>
+              <button onClick={(e) => {
+    e.stopPropagation(); // Empêche la propagation de l'événement
+    updateQuantity(index, 1);
+  }} className="p-1 bg-neutral-800 rounded"><Plus size={14} /></button>
             </div>
           </div>
 
