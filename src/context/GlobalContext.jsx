@@ -25,8 +25,27 @@ export const GlobalProvider = ({ children }) => {
 
   // Logique du Panier
   const addToCart = (product) => {
-    setCart((prev) => [...prev, product]);
-  };
+  setCart((prev) => {
+    const existingIndex = prev.findIndex(item => item.name === product.name);
+    if (existingIndex !== -1) {
+      // Si le produit existe, on augmente la quantité
+      const newCart = [...prev];
+      newCart[existingIndex].quantity += 1;
+      return newCart;
+    }
+    // Sinon, on ajoute avec quantité 1
+    return [...prev, { ...product, quantity: 1 }];
+  });
+};
+
+const updateQuantity = (index, delta) => {
+  setCart((prev) => {
+    const newCart = [...prev];
+    newCart[index].quantity += delta;
+    if (newCart[index].quantity < 1) newCart[index].quantity = 1;
+    return newCart;
+  });
+};
 
   const removeFromCart = (index) => {
     setCart((prev) => prev.filter((_, i) => i !== index));
@@ -44,7 +63,7 @@ export const GlobalProvider = ({ children }) => {
   return (
     <GlobalContext.Provider value={{ 
       cart, addToCart, removeFromCart, 
-      favorites, toggleFavorite 
+      updateQuantity, favorites, toggleFavorite 
     }}>
       {children}
     </GlobalContext.Provider>

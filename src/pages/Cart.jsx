@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
-import { Trash2, ShoppingCart, MessageCircle } from 'lucide-react';
+import { Trash2, ShoppingCart, MessageCircle, Minus, Plus } from 'lucide-react';
 
 const Cart = () => {
-  const { cart, removeFromCart } = useContext(GlobalContext);
+ const { cart, removeFromCart, updateQuantity } = useContext(GlobalContext);
 
-  // Calcul du total
-  const total = cart.reduce((acc, item) => acc + parseInt(item.price.replace(/\D/g, '')), 0);
+  const total = cart.reduce((acc, item) => {
+    const price = parseInt(item.price.replace(/\D/g, ''));
+    return acc + (price * item.quantity);
+  }, 0);
+
 
   // Génération du message WhatsApp
   const generateWhatsAppMessage = () => {
@@ -19,37 +22,39 @@ const Cart = () => {
     <div className="pt-24 px-6 pb-32 max-w-2xl mx-auto min-h-screen">
       <h2 className="text-4xl font-black uppercase italic mb-10">Mon <span className="text-[#00A3FF]">Panier</span></h2>
       
-      {cart.length === 0 ? (
-        <p className="text-[#E0E0E0] text-center mt-20">Votre panier est vide.</p>
-      ) : (
-        <div className="flex flex-col gap-6">
-          {cart.map((item, index) => (
-            <div key={index} className="flex justify-between items-center bg-neutral-900 p-4 rounded-xl border border-white/5">
-              <div>
-                <h3 className="font-bold">{item.name}</h3>
-                <p className="text-[#00A3FF] font-bold">{item.price}</p>
-              </div>
-              <button onClick={() => removeFromCart(index)} className="text-red-500 hover:text-red-400">
-                <Trash2 size={20} />
-              </button>
-            </div>
-          ))}
-
-          <div className="mt-8 border-t border-white/10 pt-6">
-            <div className="flex justify-between text-2xl font-black mb-8">
-              <span>Total</span>
-              <span className="text-[#00A3FF]">{total.toLocaleString()} FCFA</span>
-            </div>
+      {cart.map((item, index) => (
+        <div key={index} className="flex items-center bg-neutral-900 p-4 rounded-xl border border-white/5 mb-4">
+          {/* Prévisualisation image */}
+          <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded-lg mr-4 border border-white/10" />
+          
+          <div className="flex-grow">
+            <h3 className="font-bold">{item.name}</h3>
+            <p className="text-primary-cyan font-bold">{item.price}</p>
             
-            <a 
-              href={generateWhatsAppMessage()} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#128C7E] py-4 rounded-xl font-bold uppercase tracking-widest transition-all"
-            >
-              <MessageCircle /> Commander sur WhatsApp
-            </a>
+            {/* Contrôle de Quantité */}
+            <div className="flex items-center gap-3 mt-2">
+              <button onClick={() => updateQuantity(index, -1)} className="p-1 bg-neutral-800 rounded"><Minus size={14} /></button>
+              <span className="font-bold w-6 text-center">{item.quantity}</span>
+              <button onClick={() => updateQuantity(index, 1)} className="p-1 bg-neutral-800 rounded"><Plus size={14} /></button>
+            </div>
           </div>
+
+          <button onClick={() => removeFromCart(index)} className="text-red-500 hover:text-red-400">
+            <Trash2 size={20} />
+          </button>
+        </div>
+      ))}
+
+      {/* Total et WhatsApp */}
+      {cart.length > 0 && (
+        <div className="mt-8 border-t border-white/10 pt-8">
+          <div className="flex justify-between text-2xl font-black mb-6">
+            <span>Total</span>
+            <span className="text-primary-cyan">{total.toLocaleString()} FCFA</span>
+          </div>
+          <a href="#" className="w-full flex items-center justify-center gap-3 bg-[#25D366] py-4 rounded-xl font-black uppercase">
+            <MessageCircle /> Commander ({cart.reduce((a, b) => a + b.quantity, 0)} articles)
+          </a>
         </div>
       )}
     </div>

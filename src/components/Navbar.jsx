@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { ShoppingBag, Search, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GlobalContext } from '../context/GlobalContext';
+import { Link } from 'react-router-dom';
 
 
 const linkNav = [
@@ -64,14 +65,14 @@ const Navbar = () => {
             <div className="flex items-center gap-6">
               <Search size={20} className="cursor-pointer hover:text-[#00A3FF] hidden sm:block" />
               {/* Icône Panier avec Badge */}
-        <div className="relative cursor-pointer">
+        <Link to="/cart" className="relative cursor-pointer">
           <ShoppingBag size={20} className="hover:text-[#00A3FF]" />
           {cart.length > 0 && (
             <span className="absolute -top-2 -right-2 bg-[#00A3FF] text-black text-[10px] font-black w-5 h-5 flex items-center justify-center rounded-full">
               {cart.length}
             </span>
           )}
-        </div>
+        </Link>
               <button onClick={() => setIsMenuOpen(true)} className="md:hidden text-[#00A3FF]">
                 <Menu />
               </button>              
