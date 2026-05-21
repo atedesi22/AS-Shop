@@ -22,14 +22,19 @@ const Shop = () => {
     { name: "Jordan 4 Black Cat", price: "165 000 FCFA", category: "Outfits", image: "/asshop14.JPG" },
   ];
 
-  // Filtre intelligent avec useMemo pour la performance
+  // 1. Mélange initial une seule fois au chargement
+  const shuffledProducts = useMemo(() => {
+    return [...products].sort(() => 0.5 - Math.random());
+  }, []);
+
+  // 2. Filtre la liste déjà mélangée
   const filteredProducts = useMemo(() => {
-    return products.filter((p) => {
+    return shuffledProducts.filter((p) => {
       const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = category === "Tous" || p.category === category;
       return matchesSearch && matchesCategory;
     });
-  }, [searchTerm, category]);
+  }, [searchTerm, category, shuffledProducts]);
 
   return (
     <div className="pt-24 px-6 pb-32 max-w-7xl mx-auto min-h-screen">

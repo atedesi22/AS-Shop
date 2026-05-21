@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ProductCard from '../components/ProductCard';
 import BottomNav from '../components/BottomNav';
 import { Link } from 'react-router-dom';
+import { products } from '../data/products';
 // import logoAsShop from '../assets/asshop2.JPG';
 
 
@@ -16,7 +17,7 @@ const Home = () => {
         // import catShoes from '../assets/asshop5.JPG';
         // import catClothes from '../assets/asshop3.JPG';
         // import catAcc from '../assets/asshop4.JPG';
-
+const randomProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 3);
 
   return (
     <div className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
@@ -82,15 +83,16 @@ const Home = () => {
       {/* --- PRODUITS VEDETTES --- */}
       <section className="container mx-auto px-6 pb-32">
         <div className="flex justify-between items-end mb-16">
-          <h2 className="text-5xl font-black uppercase italic">Best <span className="text-[#00A3FF]">Sellers</span></h2>
+          <h2 className="text-2xl font-black uppercase italic mb-6">
+        Coup de <span className="text-[#00A3FF]">Cœur</span>
+          </h2>
           <a href="#" className="text-[#00A3FF] font-bold hover:underline">Voir tout</a>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
-          <ProductCard name="Jordan 4 Black Cat" price="165 000 FCFA" />
-          <ProductCard name="Nike Dunk Low Panda" price="85 000 FCFA" />
-          <ProductCard name="Yeezy Boost 350" price="145 000 FCFA" />
-          <ProductCard name="Air Force 1 White" price="75 000 FCFA" />
-        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {randomProducts.map((product, index) => (
+          <ProductCard key={index} {...product} />
+        ))}
+      </div>
       </section>
           <BottomNav />
     </div>
