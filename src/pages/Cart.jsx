@@ -29,7 +29,7 @@ const Cart = () => {
           
           <div className="flex-grow">
             <h3 className="font-bold">{item.name}</h3>
-            <p className="text-primary-cyan font-bold">{item.price}</p>
+            <p className="text-[#00A3FF] font-bold">{item.price}</p>
             
             {/* Contrôle de Quantité */}
             <div className="flex items-center gap-3 mt-2">
@@ -53,7 +53,7 @@ const Cart = () => {
         <div className="mt-8 border-t border-white/10 pt-8">
           <div className="flex justify-between text-2xl font-black mb-6">
             <span>Total</span>
-            <span className="text-primary-cyan">{total.toLocaleString()} FCFA</span>
+            <span className="text-[#00A3FF]">{total.toLocaleString()} FCFA</span>
           </div>
           <a href="#" className="w-full flex items-center justify-center gap-3 bg-[#25D366] py-4 rounded-xl font-black uppercase">
             <MessageCircle /> Commander ({cart.reduce((a, b) => a + b.quantity, 0)} articles)

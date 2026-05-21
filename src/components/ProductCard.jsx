@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { ShoppingCart, X, MessageCircle, Heart } from 'lucide-react';
 import { GlobalContext } from '../context/GlobalContext';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ name, price, image }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,8 +22,11 @@ const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
   return (
     <>
       <div className="bg-neutral-900 rounded-2xl p-4 border border-white/5 group hover:border-[#00A3FF] transition-all">
+      <Link to={`/product/${name}`} className="block">
         <img src={image} alt={name} className="w-full h-64 object-cover rounded-xl mb-4" />
-        <h3 className="font-bold text-lg">{name}</h3>
+          <h3 className="font-bold text-lg">{name}</h3>
+      </Link>
+        
         <p className="text-[#00A3FF] font-bold mb-4">{price}</p>
 
         <div className="flex gap-2">

@@ -8,6 +8,7 @@ import Shop from './pages/Shop';
 import Cart from './pages/Cart';
 import Favorites from './pages/Favorites';
 import Auth from './pages/Auth';
+import ProductDetail from './pages/ProductDetail';
 
 // Import des composants UI
 import Navbar from './components/Navbar';
@@ -32,6 +33,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/product/:name" element={<ProductDetail />} />
           </Routes>
 
           {/* Navigation Mobile en bas */}

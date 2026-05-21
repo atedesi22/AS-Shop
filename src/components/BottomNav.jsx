@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Home, Search, ShoppingBag, User, Heart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
 
 const BottomNav = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -31,11 +32,21 @@ const BottomNav = () => {
           exit={{ y: 100 }}
           className="md:hidden fixed bottom-0 left-0 w-full bg-black/80 backdrop-blur-lg border-t border-white/10 z-[150] px-6 py-3 flex justify-between items-center"
         >
-          <NavItem icon={<Home size={24} />} label="Accueil" active />
-          <NavItem icon={<Search size={24} />} label="Recherche" />
-          <NavItem icon={<ShoppingBag size={24} />} label="Panier" />
-          <NavItem icon={<Heart size={24} />} label="Favoris" />
-          <NavItem icon={<User size={24} />} label="Profil" />
+          <NavLink to="/" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
+            <Home size={24} />
+          </NavLink>
+          <NavLink to="/search" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
+            <Search size={24} />
+          </NavLink>
+          <NavLink to="/cart" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
+            <ShoppingBag size={24} />
+          </NavLink>
+          <NavLink to="/wishlist" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
+            <Heart size={24} />
+          </NavLink>
+          <NavLink to="/profile" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
+            <User size={24} />
+          </NavLink>
         </motion.div>
       )}
     </AnimatePresence>
