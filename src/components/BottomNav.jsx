@@ -44,7 +44,7 @@ const BottomNav = () => {
           <NavLink to="/favorites" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
             <Heart size={24} />
           </NavLink>
-          <NavLink to="/profile" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
+          <NavLink to="/auth" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
             <User size={24} />
           </NavLink>
         </motion.div>

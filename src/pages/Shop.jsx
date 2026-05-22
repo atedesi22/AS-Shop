@@ -38,6 +38,8 @@ const Shop = () => {
 
   return (
     <div className="pt-24 px-6 pb-32 max-w-7xl mx-auto min-h-screen">
+
+      
       
       {/* Header Boutique */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">

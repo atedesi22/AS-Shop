@@ -20,6 +20,8 @@ const ProductDetail = () => {
 
   return (
     <div className="pt-24 px-6 pb-20 max-w-4xl mx-auto min-h-screen">
+
+      
       <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-white/50 mb-6 hover:text-white">
         <ArrowLeft size={20} /> Retour
       </button>

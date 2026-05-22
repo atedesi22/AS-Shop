@@ -6,6 +6,14 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-[#0D0D0D]">
+      {/* Effet d'arrière-plan : Poussière d'or subtile */}
+      <div className="fixed inset-0 pointer-events-none opacity-15 z-0">
+        <img 
+          src="/asshop1.JPG" 
+          className="w-full h-full object-cover filter blur-[2px]"
+          alt=""
+        />
+      </div>
       <motion.div 
         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
         className="w-full max-w-md bg-neutral-900 p-8 rounded-3xl border border-white/10"

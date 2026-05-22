@@ -20,6 +20,8 @@ const Cart = () => {
 
   return (
     <div className="pt-24 px-6 pb-32 max-w-2xl mx-auto min-h-screen">
+
+      
       <h2 className="text-4xl font-black uppercase italic mb-10">Mon <span className="text-[#00A3FF]">Panier</span></h2>
       
       {cart.map((item, index) => (
