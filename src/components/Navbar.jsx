@@ -45,13 +45,13 @@ const Navbar = () => {
             )}
           </AnimatePresence>
     
-    <nav className="fixed w-full z-[100] px-6 py-5 flex justify-between items-center bg-black/40 backdrop-blur-xl border-b border-white/5">
+    <nav className="fixed w-full z-[100] flex justify-between items-center bg-gray-950/5 backdrop-blur-xl border-b border-white/5">
             {/* --- LOGO À LA PLACE DU TEXTE --- */}
-            <a href="/" className="group block h-12">
+            <a href="/" className="group block h-20 max-sm:mt-0 m-5 pr-13">
               <img 
                 src='/logo.png' // Utilisation de la variable importée ici
                 alt="AS SHOP - Logo Streetwear Douala" 
-                className="h-full w-55 object-contain transition-transform group-hover:scale-105"
+                className="h-full max-sm:h-25 max-sm:mb-9 w-55 object-contain transition-transform group-hover:scale-105"
               />
             </a>
             
