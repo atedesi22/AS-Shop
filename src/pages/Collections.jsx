@@ -16,7 +16,6 @@ const Collections = () => {
       <section className="mb-20">
         <div className="relative w-full h-[60vh] rounded-3xl overflow-hidden group">
           <img src="/asshop13.JPG" alt="Drop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          {/* <video src="/asshop.mp4" autoPlay /> */}
           <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-10">
             <span className="text-[#00A3FF] font-black uppercase tracking-widest mb-2">Nouveau Drop</span>
             <h1 className="text-6xl font-black italic uppercase mb-4">Collection Zenith</h1>
@@ -24,6 +23,31 @@ const Collections = () => {
           </div>
         </div>
       </section>
+      {/* 1. LE DROP DU MOMENT (Vidéo en boucle) */}
+        {/* <section className="mb-20">
+        <div className="relative w-full h-[60vh] rounded-3xl overflow-hidden group"> */}
+            {/* Balise vidéo remplaçant la balise img */}
+            {/* <video 
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            >
+            <source src="/assshop.mp4" type="video/mp4" />
+            Votre navigateur ne supporte pas la lecture de vidéos.
+            </video> */}
+
+            {/* Overlay qui reste par-dessus la vidéo */}
+            {/* <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-10">
+            <span className="text-[#00A3FF] font-black uppercase tracking-widest mb-2">Nouveau Drop</span>
+            <h1 className="text-6xl font-black italic uppercase mb-4">Collection Zenith</h1>
+            <button className="w-fit bg-white text-black px-8 py-3 rounded-full font-black uppercase hover:bg-[#00A3FF] hover:text-white transition">
+                Découvrir
+            </button>
+            </div>
+        </div>
+        </section> */}
 
       {/* 2. SHOP THE LOOK (Social) */}
       <section className="mb-20">
