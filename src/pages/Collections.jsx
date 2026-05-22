@@ -16,6 +16,7 @@ const Collections = () => {
       <section className="mb-20">
         <div className="relative w-full h-[60vh] rounded-3xl overflow-hidden group">
           <img src="/asshop13.JPG" alt="Drop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          {/* <video src="/asshop.mp4" autoPlay /> */}
           <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-10">
             <span className="text-[#00A3FF] font-black uppercase tracking-widest mb-2">Nouveau Drop</span>
             <h1 className="text-6xl font-black italic uppercase mb-4">Collection Zenith</h1>
