@@ -41,7 +41,7 @@ const BottomNav = () => {
           <NavLink to="/cart" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
             <ShoppingBag size={24} />
           </NavLink>
-          <NavLink to="/wishlist" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
+          <NavLink to="/favorites" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
             <Heart size={24} />
           </NavLink>
           <NavLink to="/profile" className={({isActive}) => isActive ? "text-[#00A3FF]" : "text-white/50"}>
