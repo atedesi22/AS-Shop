@@ -13,6 +13,7 @@ import ProductDetail from './pages/ProductDetail';
 // Import des composants UI
 import Navbar from './components/Navbar';
 import BottomNav from './components/BottomNav';
+import Collections from './pages/Collections';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/collections" element={<Collections />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/auth" element={<Auth />} />

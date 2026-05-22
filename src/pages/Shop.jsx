@@ -1,26 +1,27 @@
 import React, { useState, useMemo } from 'react';
 import { Search, Filter } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
+import { products } from '../data/products';
 
 const Shop = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [category, setCategory] = useState("Tous");
 
   // Simulation de données (à remplacer plus tard par ton appel API Laravel)
-  const products = [
-    { name: "Jordan 4 Black Cat", price: "165 000 FCFA", category: "Outfits", image: "/asshop3.JPG" },
-    { name: "Nike Dunk Low Panda", price: "85 000 FCFA", category: "Pulls", image: "/asshop4.JPG" },
-    { name: "Hoodie Vintage AS", price: "45 000 FCFA", category: "Sneakers", image: "/asshop5.JPG" },
-    { name: "Sacoche Techwear", price: "35 000 FCFA", category: "Sneakers", image: "/asshop6.JPG" },
-    { name: "Jordan 4 Black Cat", price: "165 000 FCFA", category: "Pulls", image: "/asshop7.JPG" },
-    { name: "Nike Dunk Low Panda", price: "85 000 FCFA", category: "Outfits", image: "/asshop8.JPG" },
-    { name: "Hoodie Vintage AS", price: "45 000 FCFA", category: "T-shirts", image: "/asshop9.JPG" },
-    { name: "Sacoche Techwear", price: "35 000 FCFA", category: "Outfits", image: "/asshop10.JPG" },
-    { name: "Jordan 4 Black Cat", price: "165 000 FCFA", category: "Sneakers", image: "/asshop11.JPG" },
-    { name: "Nike Dunk Low Panda", price: "85 000 FCFA", category: "Chemises", image: "/asshop12.JPG" },
-    { name: "Sacoche Techwear", price: "35 000 FCFA", category: "Chemises", image: "/asshop13.JPG" },
-    { name: "Jordan 4 Black Cat", price: "165 000 FCFA", category: "Outfits", image: "/asshop14.JPG" },
-  ];
+  // const products = [
+  //   { name: "Jordan 4 Black Cat", price: "165 000 FCFA", category: "Outfits", image: "/asshop3.JPG" },
+  //   { name: "Nike Dunk Low Panda", price: "85 000 FCFA", category: "Pulls", image: "/asshop4.JPG" },
+  //   { name: "Hoodie Vintage AS", price: "45 000 FCFA", category: "Sneakers", image: "/asshop5.JPG" },
+  //   { name: "Sacoche Techwear", price: "35 000 FCFA", category: "Sneakers", image: "/asshop6.JPG" },
+  //   { name: "Jordan 4 Black Cat", price: "165 000 FCFA", category: "Pulls", image: "/asshop7.JPG" },
+  //   { name: "Nike Dunk Low Panda", price: "85 000 FCFA", category: "Outfits", image: "/asshop8.JPG" },
+  //   { name: "Hoodie Vintage AS", price: "45 000 FCFA", category: "T-shirts", image: "/asshop9.JPG" },
+  //   { name: "Sacoche Techwear", price: "35 000 FCFA", category: "Outfits", image: "/asshop10.JPG" },
+  //   { name: "Jordan 4 Black Cat", price: "165 000 FCFA", category: "Sneakers", image: "/asshop11.JPG" },
+  //   { name: "Nike Dunk Low Panda", price: "85 000 FCFA", category: "Chemises", image: "/asshop12.JPG" },
+  //   { name: "Sacoche Techwear", price: "35 000 FCFA", category: "Chemises", image: "/asshop13.JPG" },
+  //   { name: "Jordan 4 Black Cat", price: "165 000 FCFA", category: "Outfits", image: "/asshop14.JPG" },
+  // ];
 
   // 1. Mélange initial une seule fois au chargement
   const shuffledProducts = useMemo(() => {
