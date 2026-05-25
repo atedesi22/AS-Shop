@@ -12,15 +12,15 @@ const Preloader = ({ finishLoading }) => {
   return (
 
     <AnimatePresence>
-        <div className="fixed inset-0 pointer-events-none opacity-15 z-0">
+        {/* <div className="fixed inset-0 pointer-events-none opacity-15 z-0">
         <img 
           src="/asshop1.JPG" 
           className="w-full h-full object-cover filter blur-[2px]"
           alt=""
         />
-      </div>
+      </div> */}
       <motion.div
-        className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white text-black"
+        className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white"
         exit={{ opacity: 0 }}
       >
         {/* LOGO avec effet Bounce */}
@@ -34,8 +34,8 @@ const Preloader = ({ finishLoading }) => {
         </motion.div>
 
         {/* MARQUES qui apparaissent au fur et à mesure */}
-        
-        <div className="flex gap-2 text-black/90 font-bold uppercase tracking-widest">
+        {/* NIKE • ADIDAS • JORDAN • VANS • CONVERSE • PUMA • AS SHOP • NIKE • ADIDAS • JORDAN • VANS • CONVERSE • PUMA • AS SHOP •  */}
+        <div className="flex gap-1 text-black/90 font-bold uppercase tracking-widest">
           {['Nike', 'Jordan', 'Adidas', 'Vans', 'Converse', 'Puma'].map((brand, i) => (
             <motion.span
               key={brand}
