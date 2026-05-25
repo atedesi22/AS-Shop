@@ -52,7 +52,7 @@ const Collections = () => {
       {/* 2. SHOP THE LOOK (Social) */}
       <section className="mb-20">
         <h2 className="text-4xl font-black uppercase italic mb-10">Shop <span className="text-[#00A3FF]">the Look</span></h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {vibes.map((v, i) => (
             <div key={i} className="aspect-[3/4] bg-neutral-900 rounded-2xl overflow-hidden relative cursor-pointer hover:opacity-80 transition">
               <img src={v.image} className="w-full h-full object-cover" />

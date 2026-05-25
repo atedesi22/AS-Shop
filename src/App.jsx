@@ -35,7 +35,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/auth" element={<Auth />} />
-            <Route path="/product/:name" element={<ProductDetail />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
           </Routes>
 
           {/* Navigation Mobile en bas */}

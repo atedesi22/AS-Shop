@@ -3,12 +3,15 @@ import { ShoppingCart, X, MessageCircle, Heart } from 'lucide-react';
 import { GlobalContext } from '../context/GlobalContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { products } from '../data/products';
 
 const ProductCard = ({ name, price, image }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { addToCart, toggleFavorite, favorites } = useContext(GlobalContext);
+  const product = products.find((p) => p.name === name); // Cherche par nom
   
-  const isFavorite = favorites?.some((item) => item.name === name);
+  // const isFavorite = favorites?.some((item) => item.name === name);
+const isFavorite = favorites?.some((item) => item.id === product.id);
 
 const BASE_URL = "https://as-shop-seven.vercel.app"; // Remplace par ton vrai domaine
 
@@ -22,8 +25,8 @@ const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
   return (
     <>
       <div className="bg-neutral-900 rounded-2xl p-4 border border-white/5 group hover:border-[#00A3FF] transition-all">
-      <Link to={`/product/${name}`} className="block">
-        <img src={image} alt={name} className="w-full h-64 object-cover rounded-xl mb-4" />
+      {/* <Link to={`/product/${name}`} className="block">
+        <img src={image} alt={name} className="w-full h-48 max-sm:h-48 object-cover rounded-xl mb-4" />
           <h3 className="font-bold text-lg">{name}</h3>
       </Link>
         
@@ -43,7 +46,25 @@ const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
         >
           <Heart size={20} className={isFavorite ? 'fill-white' : ''} />
         </button>
-        </div>
+        </div> */}
+
+        {/* On utilise product.id pour le lien */}
+      <Link to={`/product/${product.id}`} className="block">
+        <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-xl mb-4" />
+        <h3 className="font-bold text-lg">{product.name}</h3>
+      </Link>
+        
+      <p className="text-[#00A3FF] font-bold mb-4">{product.price}</p>
+
+      <div className="flex gap-2">
+        <button onClick={() => addToCart(product)} 
+        className="flex-grow py-3 bg-white text-black font-bold rounded-lg hover:bg-[#00A3FF] transition">
+          <ShoppingCart size={20} className="inline mr-2"/> 
+        </button>
+        <button onClick={() => toggleFavorite(product)} className={`p-3 rounded-lg border ${isFavorite ? 'bg-red-500 border-red-500' : 'border-white/10'}`}>
+          <Heart size={20} className={isFavorite ? 'fill-white' : ''} />
+        </button>
+      </div>
 
         <button 
           onClick={() => setIsModalOpen(true)}
@@ -82,3 +103,4 @@ const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
 };
 
 export default ProductCard;
+
