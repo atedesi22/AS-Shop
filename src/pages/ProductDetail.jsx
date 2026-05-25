@@ -251,6 +251,8 @@ const ProductDetail = () => {
   // Initialisation des états avec les données réelles du produit
   const [mainImage, setMainImage] = useState(product.image);
 
+  const BASE_URL = "https://as-shop-seven.vercel.app";
+
   const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
     `📦 *COMMANDE AS SHOP*\n\n` +
     `Article : ${product.name}\n` +
