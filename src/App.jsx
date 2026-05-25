@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalProvider } from './context/GlobalContext';
 
@@ -14,36 +14,53 @@ import ProductDetail from './pages/ProductDetail';
 import Navbar from './components/Navbar';
 import BottomNav from './components/BottomNav';
 import Collections from './pages/Collections';
+import Preloader from './components/Preloader';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Définit la durée minimale du preloader (ex: 2.5 secondes)
+    const timer = setTimeout(() => setLoading(false), 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
+
   return (
-    <GlobalProvider>
-      <Router>
-        <div className="bg-[#050505] min-h-screen text-white font-sans selection:bg-[#00A3FF] selection:text-black">
-          
-          {/* Top Bar Promotionnelle NovaVerse */}
-          <div className="bg-[#00A3FF] text-[10px] text-center py-1 font-black tracking-[0.2em] uppercase cursor-pointer hover:bg-white transition-colors">
-            Expérience NovaVerse activée - Connectez-vous pour synchroniser vos données
-          </div>
+    <>
+    {loading ? <Preloader /> : (
+        <div className="content">
+          <GlobalProvider>
+            <Router>
+              <div className="bg-[#050505] min-h-screen text-white font-sans selection:bg-[#00A3FF] selection:text-black">
+                
+                {/* Top Bar Promotionnelle NovaVerse */}
+                <div className="bg-[#00A3FF] text-[10px] text-center py-1 font-black tracking-[0.2em] uppercase cursor-pointer hover:bg-white transition-colors">
+                  Expérience NovaVerse activée - Connectez-vous pour synchroniser vos données
+                </div>
 
-          <Navbar />
+                <Navbar />
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/collections" element={<Collections />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/favorites" element={<Favorites />} />
-            <Route path="/auth" element={<Auth />} />
-            <Route path="/product/:id" element={<ProductDetail />} />
-          </Routes>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/shop" element={<Shop />} />
+                  <Route path="/collections" element={<Collections />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/favorites" element={<Favorites />} />
+                  <Route path="/auth" element={<Auth />} />
+                  <Route path="/product/:id" element={<ProductDetail />} />
+                </Routes>
 
-          {/* Navigation Mobile en bas */}
-          <BottomNav />
-          
+                {/* Navigation Mobile en bas */}
+                <BottomNav />
+                
+              </div>
+            </Router>
+          </GlobalProvider>
         </div>
-      </Router>
-    </GlobalProvider>
+      )}
+    </>
+    
   );
 }
 
