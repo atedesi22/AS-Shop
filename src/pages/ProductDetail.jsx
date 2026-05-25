@@ -254,8 +254,9 @@ const ProductDetail = () => {
   const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
     `📦 *COMMANDE AS SHOP*\n\n` +
     `Article : ${product.name}\n` +
-    `Prix : ${product.price}\n\n` +
-    `Lien : https://as-shop-seven.vercel.app/product/${product.id}`
+    `Prix : ${product.price}\n` +
+    `Image : ${BASE_URL}${mainImage}\n\n` + // Ajout de l'image ici
+    `Lien : ${BASE_URL}/product/${product.id}`
   )}`;
 
   return (
