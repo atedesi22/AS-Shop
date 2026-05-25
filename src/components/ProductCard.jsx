@@ -66,12 +66,12 @@ const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
         </button>
       </div>
 
-        <button 
+        {/* <button 
           onClick={() => setIsModalOpen(true)}
           className="w-full py-3 bg-[#00A3FF] text-white font-bold rounded-lg hover:bg-[#00A3FF] hover:text-white transition"
         >
            Commander
-        </button>
+        </button> */}
       </div>
  {/* sdsd */}
       {/* Modal de Prévisualisation */}
