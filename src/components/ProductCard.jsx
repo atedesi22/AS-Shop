@@ -50,8 +50,8 @@ const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
 
         {/* On utilise product.id pour le lien */}
       <Link to={`/product/${product.id}`} className="block">
-        <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-xl mb-4" />
-        <h3 className="font-bold text-lg">{product.name}</h3>
+        <img src={product.image} alt={product.name} className="w-full h-45 object-cover rounded-xl mb-4" />
+        <h3 className="font-bold text-sm">{product.name}</h3>
       </Link>
         
       <p className="text-[#00A3FF] font-bold mb-4">{product.price}</p>
