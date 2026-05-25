@@ -36,7 +36,7 @@ const Preloader = ({ finishLoading }) => {
         {/* MARQUES qui apparaissent au fur et à mesure */}
         
         <div className="flex gap-2 text-black/90 font-bold uppercase tracking-widest">
-          {['Nike', 'Jordan', 'Adidas', 'Vans', 'Converse', 'Puma', 'AS SHOP'].map((brand, i) => (
+          {['Nike', 'Jordan', 'Adidas', 'Vans', 'Converse', 'Puma'].map((brand, i) => (
             <motion.span
               key={brand}
               initial={{ y: 20, opacity: 0 }}
