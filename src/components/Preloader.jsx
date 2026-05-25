@@ -35,7 +35,7 @@ const Preloader = ({ finishLoading }) => {
 
         {/* MARQUES qui apparaissent au fur et à mesure */}
         {/* NIKE • ADIDAS • JORDAN • VANS • CONVERSE • PUMA • AS SHOP • NIKE • ADIDAS • JORDAN • VANS • CONVERSE • PUMA • AS SHOP •  */}
-        <div className="flex gap-1 text-black/90 font-bold uppercase tracking-widest">
+        {/* <div className="flex gap-1 text-black/90 font-bold uppercase tracking-widest">
           {['Nike', 'Jordan', 'Adidas', 'Vans', 'Converse', 'Puma'].map((brand, i) => (
             <motion.span
               key={brand}
@@ -46,7 +46,7 @@ const Preloader = ({ finishLoading }) => {
               {brand}
             </motion.span>
           ))}
-        </div>
+        </div> */}
       </motion.div>
     </AnimatePresence>
   );
