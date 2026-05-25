@@ -57,7 +57,7 @@ const Shop = () => {
 
       {/* Grille Produits */}
       {filteredProducts.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1">
           {filteredProducts.map((p) => (
             <ProductCard key={p.id} name={p.name} price={p.price} image={p.image} />
           ))}
