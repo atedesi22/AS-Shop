@@ -84,15 +84,17 @@ const randomProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 3)
       <section className="container mx-auto px-6 pb-32">
         <div className="flex justify-between items-end mb-16">
           <h2 className="text-2xl font-black uppercase italic mb-6">
-        Coup de <span className="text-[#00A3FF]">Cœur</span>
+            Coup de <span className="text-[#00A3FF]">Cœur</span>
           </h2>
           <a href="#" className="text-[#00A3FF] font-bold hover:underline">Voir tout</a>
         </div>
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {randomProducts.map((product, index) => (
-          <ProductCard key={index} {...product} />
-        ))}
-      </div>
+          {randomProducts.map((p) => (
+            // On passe l'objet entier sous le nom 'product'
+            <ProductCard key={p.id} product={p} />
+          ))}
+        </div>
       </section>
           <BottomNav />
     </div>

@@ -10,11 +10,22 @@ const Cart = () => {
     return acc + (price * item.quantity);
   }, 0);
 
+  const BASE_URL = "https://as-shop-seven.vercel.app";
 
-  // Génération du message WhatsApp
+  // Génération du message avec la liste des produits ET le lien vers les images/produits
   const generateWhatsAppMessage = () => {
-    const productList = cart.map(item => `- ${item.name} (${item.price})`).join('\n');
-    const message = `Bonjour AS SHOP, je souhaite commander les articles suivants :\n\n${productList}\n\nTotal : ${total.toLocaleString()} FCFA`;
+    const productList = cart
+      .map(item => `• ${item.name} | ${item.price} | Qte: ${item.quantity}`)
+      .join('\n');
+    
+    // On crée une liste des URLs des images pour que le vendeur sache de quoi on parle
+    const imagesList = cart.map(item => `${BASE_URL}${item.image}`).join('\n');
+
+    const message = `📦 *COMMANDE AS SHOP*\n\n` +
+      `Articles :\n${productList}\n\n` +
+      `*Total : ${total.toLocaleString()} FCFA*\n\n` +
+      `Images des produits :\n${imagesList}`;
+      
     return `https://wa.me/237694870584?text=${encodeURIComponent(message)}`;
   };
 
@@ -57,7 +68,14 @@ const Cart = () => {
             <span>Total</span>
             <span className="text-[#00A3FF]">{total.toLocaleString()} FCFA</span>
           </div>
-          <a href="#" className="w-full flex items-center justify-center gap-3 bg-[#25D366] py-4 rounded-xl font-black uppercase">
+          
+          {/* APPEL DE LA FONCTION ICI */}
+          <a 
+            href={generateWhatsAppMessage()} 
+            target="_blank" 
+            rel="noreferrer"
+            className="w-full flex items-center justify-center gap-3 bg-[#25D366] py-4 rounded-xl font-black uppercase hover:bg-[#20bd5a] transition"
+          >
             <MessageCircle /> Commander ({cart.reduce((a, b) => a + b.quantity, 0)} articles)
           </a>
         </div>
