@@ -9,6 +9,7 @@ import Cart from './pages/Cart';
 import Favorites from './pages/Favorites';
 import Auth from './pages/Auth';
 import ProductDetail from './pages/ProductDetail';
+import SearchPage from './pages/Search';
 
 // Import des composants UI
 import Navbar from './components/Navbar';
@@ -49,6 +50,7 @@ function App() {
                   <Route path="/favorites" element={<Favorites />} />
                   <Route path="/auth" element={<Auth />} />
                   <Route path="/product/:id" element={<ProductDetail />} />
+                  <Route path="/search" element={<SearchPage />} />
                 </Routes>
 
                 {/* Navigation Mobile en bas */}
