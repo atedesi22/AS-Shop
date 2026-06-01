@@ -15,7 +15,7 @@ const BrandProducts = () => {
         Produits <span className="text-[#00A3FF]">{brandName}</span>
       </h2>
       
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
         {filtered.map(p => <ProductCard key={p.id} product={p} />)}
       </div>
     </div>

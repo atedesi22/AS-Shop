@@ -33,7 +33,7 @@ const SearchPage = () => {
 
       {/* Résultats ou "Recherches populaires" */}
       {query ? (
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-1">
           {results.map((p) => (<ProductCard key={p.id} product={p} />))}
           {results.length === 0 && <p className="text-white/30 col-span-2 text-center mt-10">Aucun résultat pour "{query}"</p>}
         </div>
