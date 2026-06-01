@@ -10,12 +10,14 @@ import Favorites from './pages/Favorites';
 import Auth from './pages/Auth';
 import ProductDetail from './pages/ProductDetail';
 import SearchPage from './pages/Search';
+import BrandProducts from './pages/BrandProducts';
 
 // Import des composants UI
 import Navbar from './components/Navbar';
 import BottomNav from './components/BottomNav';
 import Collections from './pages/Collections';
 import Preloader from './components/Preloader';
+import Brands from './components/Brands';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,6 +53,8 @@ function App() {
                   <Route path="/auth" element={<Auth />} />
                   <Route path="/product/:id" element={<ProductDetail />} />
                   <Route path="/search" element={<SearchPage />} />
+                  <Route path="/brand" element={<Brands />} />
+                  <Route path="/brand/:brandName" element={<BrandProducts />} />
                 </Routes>
 
                 {/* Navigation Mobile en bas */}

@@ -44,7 +44,7 @@ const Shop = () => {
 
       {/* Filtres Catégories */}
       <div className="flex gap-4 mb-12 overflow-x-auto pb-2">
-        {['Tous', 'Sneakers', 'Pulls', 'Chemises', 'Outfits', 'T-shirts'].map((cat) => (
+        {['Tous', 'Sneakers', 'Pulls', 'Chemises', 'Outfits', 'T-shirts', 'Pantalons'].map((cat) => (
           <button 
             key={cat}
             onClick={() => setCategory(cat)}

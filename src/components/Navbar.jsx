@@ -15,7 +15,7 @@ const linkNav = [
 const animatedLink = [
   { label: 'Accueil', link: "/" },
   { label: 'Boutique', link: "/shop" },
-  { label: 'Marques', link: "/shop" },
+  { label: 'Marques', link: "/brand" },
   { label: 'Contact', link: "/shop" }
 ]
 const Navbar = () => {
