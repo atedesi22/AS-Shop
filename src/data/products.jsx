@@ -24,7 +24,7 @@ export const products = [
     name: "Nike Air Force 1 Blue",
     price: "15 000 FCFA",
     category: "Sneakers",
-    brand: "Adidas",
+    brand: "Nike",
     description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
     image: "/sneakers Nike/sneakerbleu3.jpg",
     gallery: ["/sneakers Nike/sneakerbleu3.jpg", "/sneakers Nike/sneakerbleu2.jpg", "/sneakers Nike/sneakerbleu1.jpg"]
@@ -34,7 +34,7 @@ export const products = [
     name: "Nike Air Force 1 Brown",
     price: "15 000 FCFA",
     category: "Sneakers",
-    brand: "Adidas",
+    brand: "Nike",
     description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
     image: "/sneakers Nike/sneakermarron1.jpg",
     gallery: ["/sneakers Nike/sneakermarron1.jpg", "/sneakers Nike/sneakermarron2.jpg", "/sneakers Nike/sneakermarron3.jpg"]
