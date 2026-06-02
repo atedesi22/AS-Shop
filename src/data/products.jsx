@@ -26,8 +26,8 @@ export const products = [
     category: "Sneakers",
     brand: "Nike",
     description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
-    image: "/sneakers Nike/sneakerbleu3.jpg",
-    gallery: ["/sneakers Nike/sneakerbleu3.jpg", "/sneakers Nike/sneakerbleu2.jpg", "/sneakers Nike/sneakerbleu1.jpg"]
+    image: "/sneakersNike/sneakerbleu3.jpg",
+    gallery: ["/sneakersNike/sneakerbleu3.jpg", "/sneakersNike/sneakerbleu2.jpg", "/sneakersNike/sneakerbleu1.jpg"]
   },
   {
     id: 4,
@@ -36,8 +36,8 @@ export const products = [
     category: "Sneakers",
     brand: "Nike",
     description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
-    image: "/sneakers Nike/sneakermarron1.jpg",
-    gallery: ["/sneakers Nike/sneakermarron1.jpg", "/sneakers Nike/sneakermarron2.jpg", "/sneakers Nike/sneakermarron3.jpg"]
+    image: "/sneakersNike/sneakermarron1.jpg",
+    gallery: ["/sneakersNike/sneakermarron1.jpg", "/sneakersNike/sneakermarron2.jpg", "/sneakersNike/sneakermarron3.jpg"]
   },
   {
     id: 5,
