@@ -20,7 +20,7 @@
 
 //   const BASE_URL = "https://as-shop-seven.vercel.app"; // Remplace par ton vrai domaine
 
-// const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
+// const whatsappLink = `https://wa.me/237650034299?text=${encodeURIComponent(
 //   `📦 *COMMANDE AS SHOP*\n\n` +
 //   `Article : ${name}\n` +
 //   `Prix : ${price}\n\n` +
@@ -138,7 +138,7 @@
 //   if (!product) return <div className="pt-24 text-center">Produit introuvable</div>;
 
 //   const BASE_URL = "https://as-shop-seven.vercel.app";
-//   const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
+//   const whatsappLink = `https://wa.me/237650034299?text=${encodeURIComponent(
 //     `📦 *COMMANDE AS SHOP*\n\n` +
 //     `Article : ${product.name}\n` +
 //     `Prix : ${product.price}\n\n` +
@@ -253,7 +253,7 @@ const ProductDetail = () => {
 
   const BASE_URL = "https://as-shop-seven.vercel.app";
 
-  const whatsappLink = `https://wa.me/237694870584?text=${encodeURIComponent(
+  const whatsappLink = `https://wa.me/237650034299?text=${encodeURIComponent(
     `📦 *COMMANDE AS SHOP*\n\n` +
     `Article : ${product.name}\n` +
     `Prix : ${product.price}\n` +
