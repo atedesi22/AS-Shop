@@ -248,7 +248,7 @@ const ProductDetail = () => {
     return <div className="pt-24 text-center text-white">Produit introuvable.</div>;
   }
 
-  // Initialisation des états avec les données réelles du produit
+  // Initialisation des états avec  ok les données réelles du produit
   const [mainImage, setMainImage] = useState(product.image);
 
   const BASE_URL = "https://as-shop-seven.vercel.app";
