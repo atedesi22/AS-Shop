@@ -26,7 +26,7 @@ const Cart = () => {
       `*Total : ${total.toLocaleString()} FCFA*\n\n` +
       `Images des produits :\n${imagesList}`;
       
-    return `https://wa.me/2376000000?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/237651234779?text=${encodeURIComponent(message)}`;
   };
 
   return (
