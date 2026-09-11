@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Search, User, Menu, X, ArrowRight } from 'lucide-react';
+import { ShoppingBag, Search, User, Menu, X, ArrowRight, Download } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProductCard from '../components/ProductCard';
 import BottomNav from '../components/BottomNav';
 import { Link } from 'react-router-dom';
 import { products } from '../data/products';
+import InstallModal from '../components/InstallModal';
 // import logoAsShop from '../assets/asshop2.JPG';
 
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isInstallOpen, setIsInstallOpen] = useState(false);
 
   // Images récupérées pour le design
         // import logoAsShop from '../assets/asshop2.JPG';
@@ -96,6 +98,27 @@ const randomProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 3)
           ))}
         </div>
       </section>
+
+      {/* BOUTON FLOTTANT D'INSTALLATION */}
+      <motion.button
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => setIsInstallOpen(true)}
+        className="fixed bottom-24 right-6 z-[200] bg-[#00A3FF] text-white p-4 rounded-full shadow-2xl shadow-[#00A3FF]/40 flex items-center gap-2 border border-white/20 group cursor-pointer"
+        title="Installer l'application"
+      >
+        <Download size={24} className="animate-bounce" />
+        <span className="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out font-bold text-sm">
+          Installer l'App
+        </span>
+      </motion.button>
+
+      {/* MODAL GUIDÉE */}
+      <InstallModal isOpen={isInstallOpen} onClose={() => setIsInstallOpen(false)} />
+
+
           <BottomNav />
     </div>
   );

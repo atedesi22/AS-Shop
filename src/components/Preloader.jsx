@@ -30,7 +30,7 @@ const Preloader = ({ finishLoading }) => {
           transition={{ type: "spring", stiffness: 200, damping: 10, bounce: 0.8 }}
           className="mb-8"
         >
-          <img src="/logo.png" alt="NovaVerse" className="w-74 h-94" />
+          <img src="/logos.png" alt="NovaVerse" className="w-74 h-94" />
         </motion.div>
 
         {/* MARQUES qui apparaissent au fur et à mesure */}

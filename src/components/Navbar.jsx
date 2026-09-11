@@ -33,7 +33,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center">
                   <a href="/" className="h-16 flex items-center">
                     <img 
-                      src='/logo.png' 
+                      src='/logos.png' 
                       alt="AS SHOP" 
                       className="h-full w-auto object-contain transition-transform hover:scale-105" 
                     />
@@ -57,7 +57,7 @@ const Navbar = () => {
   {/* Suppression de m-5 et ajout de h-16 pour garder la navbar fine */}
   <a href="/" className="h-16 flex items-center">
     <img 
-      src='/logo.png' 
+      src='/logos.png' 
       alt="AS SHOP" 
       className="h-full w-auto object-contain transition-transform hover:scale-105" 
     />
