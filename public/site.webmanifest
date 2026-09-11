@@ -1,6 +1,6 @@
 {
-  "name": "AS Shop",
-  "short_name": "AS Shop",
+  "name": "Soft Shoes",
+  "short_name": "Soft Shoes",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#2a292f",
+  "background_color": "#2a292f",
   "display": "standalone"
 }

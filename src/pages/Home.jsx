@@ -30,7 +30,8 @@ const randomProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 3)
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image avec Overlay */}
         <div className="absolute inset-0 z-0">
-          <img src='/asshop1.JPG' alt="Hero" className="w-full h-full object-cover scale-110 opacity-60" />
+          {/* <img src='/asshop1.JPG' alt="Hero" className="w-full h-full object-cover scale-110 opacity-60" /> */}
+          <img src='/adidas.JPG' alt="Hero" className="w-full h-full object-cover scale-110 opacity-60" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent" />
         </div>
 

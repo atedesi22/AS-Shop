@@ -11,7 +11,9 @@ const Preloader = ({ finishLoading }) => {
 
   return (
 
-    <AnimatePresence>
+    // <div className=" bg-gray-900">
+
+      <AnimatePresence>
         {/* <div className="fixed inset-0 pointer-events-none opacity-15 z-0">
         <img 
           src="/asshop1.JPG" 
@@ -48,7 +50,9 @@ const Preloader = ({ finishLoading }) => {
           ))}
         </div> */}
       </motion.div>
-    </AnimatePresence>
+      </AnimatePresence>
+    // {/* </div> */}
+    
   );
 };
 
