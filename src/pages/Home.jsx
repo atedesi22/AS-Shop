@@ -55,7 +55,7 @@ const randomProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 3)
       {/* --- MARQUEE DES MARQUES --- */}
       <div className="py-10 bg-white/5 border-y border-white/5 overflow-hidden whitespace-nowrap">
         <div className="animate-marquee inline-block text-2xl font-black text-white/20 uppercase">
-          NIKE • ADIDAS • JORDAN • VANS • CONVERSE • PUMA • AS SHOP • NIKE • ADIDAS • JORDAN • VANS • CONVERSE • PUMA • AS SHOP • 
+          NIKE • ADIDAS • JORDAN • VANS • CONVERSE • PUMA • NIKE • ADIDAS • JORDAN • VANS • CONVERSE • PUMA • 
         </div>
       </div>
 

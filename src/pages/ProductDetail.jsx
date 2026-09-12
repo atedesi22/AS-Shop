@@ -254,7 +254,7 @@ const ProductDetail = () => {
   const BASE_URL = "https://as-shop-seven.vercel.app";
 
   const whatsappLink = `https://wa.me/237651234779?text=${encodeURIComponent(
-    `📦 *COMMANDE AS SHOP*\n\n` +
+    `📦 *COMMANDE SOFT SHOES*\n\n` +
     `Article : ${product.name}\n` +
     `Prix : ${product.price}\n` +
     `Image : ${BASE_URL}${mainImage}\n\n` + // Ajout de l'image ici

@@ -21,7 +21,7 @@ const Cart = () => {
     // On crée une liste des URLs des images pour que le vendeur sache de quoi on parle
     const imagesList = cart.map(item => `${BASE_URL}${item.image}`).join('\n');
 
-    const message = `📦 *COMMANDE AS SHOP*\n\n` +
+    const message = `📦 *COMMANDE SOFT SHOES*\n\n` +
       `Articles :\n${productList}\n\n` +
       `*Total : ${total.toLocaleString()} FCFA*\n\n` +
       `Images des produits :\n${imagesList}`;

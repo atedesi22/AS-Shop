@@ -34,7 +34,7 @@ const Navbar = () => {
                   <a href="/" className="h-16 flex items-center">
                     <img 
                       src='/logos.png' 
-                      alt="AS SHOP" 
+                      alt="SOFT SHOES" 
                       className="h-full w-auto object-contain transition-transform hover:scale-105" 
                     />
                   </a>
@@ -58,7 +58,7 @@ const Navbar = () => {
   <a href="/" className="h-16 flex items-center">
     <img 
       src='/logos.png' 
-      alt="AS SHOP" 
+      alt="SOFT SHOES" 
       className="h-full w-auto object-contain transition-transform hover:scale-105" 
     />
   </a>

@@ -24,7 +24,7 @@ const InstallModal = ({ isOpen, onClose }) => {
               <div className="w-16 h-16 bg-[#00A3FF]/20 text-[#00A3FF] rounded-2xl mx-auto flex items-center justify-center mb-4">
                 <Smartphone size={32} />
               </div>
-              <h3 className="text-2xl font-black uppercase">Installer <span className="text-[#00A3FF]">AS Shop</span></h3>
+              <h3 className="text-2xl font-black uppercase">Installer <span className="text-[#00A3FF]">SOFT SHOES</span></h3>
               <p className="text-white/60 text-sm mt-1">Ajoute l'application sur ton écran d'accueil pour y accéder en un clic.</p>
             </div>
 

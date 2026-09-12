@@ -126,7 +126,7 @@ const ProductCard = ({ product }) => { // 1. On ne reçoit que l'objet complet
   const BASE_URL = "https://as-shop-seven.vercel.app";
 
   const whatsappLink = `https://wa.me/237650034299?text=${encodeURIComponent(
-    `📦 *COMMANDE AS SHOP*\n\n` +
+    `📦 *COMMANDE SOFT SHOES*\n\n` +
     `Article : ${product.name}\n` +
     `Prix : ${product.price}\n` +
     `Photo : ${BASE_URL}${product.image}\n\n` +
