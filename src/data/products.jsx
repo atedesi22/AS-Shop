@@ -173,7 +173,7 @@ export const products = [
   {
     id: 16,
     name: "Nike Air Force 1 Blue",
-    price: "15 000 FCFA",
+    price: "9 000 FCFA",
     category: "Sneakers",
     brand: "Nike",
     sizes: [40, 41, 42, 43, 44, 45],
@@ -184,7 +184,7 @@ export const products = [
   {
     id: 17,
     name: "Nike Air Force 1 Brown",
-    price: "15 000 FCFA",
+    price: "9 000 FCFA",
     category: "Sneakers",
     brand: "Nike",
     sizes: [40, 41, 42, 43, 44],
@@ -194,25 +194,25 @@ export const products = [
   },
   {
     id: 18,
-    name: "Jean Fit bleu",
-    price: "15 000 FCFA",
-    category: "Pantalons",
-    brand: "Puma",
-    sizes: [], // Pas de pointure pour les pantalons
-    description: "Jean slim fit pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/pantalon/jeanbleu.jpg",
-    gallery: ["/pantalon/jeanbleu2.jpg", "/pantalon/jeanbleu5.jpg", "/pantalon/jeanbleu3.jpg", "/pantalon/jeanbleu4.jpg"]
+    name: "Sneaker Polo",
+    price: "6 500 FCFA",
+    category: "Sneakers",
+    brand: "Polo",
+    sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45],
+    description: "Sneaker Polo pour un look moderne et épuré, idéal pour toutes les occasions.",
+    image: "/polo/polo1.jpeg",
+    gallery: ["/polo/polo1.jpeg", "/polo/polo2.jpeg"]
   },
   {
     id: 19,
-    name: "Jean Fit noir",
-    price: "15 000 FCFA",
-    category: "Pantalons",
-    brand: "Puma",
-    sizes: [],
-    description: "Jean slim fit noir pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/pantalon/jeannoir.jpg",
-    gallery: ["/pantalon/jeannoir.jpg", "/pantalon/jeannoir2.jpg"]
+    name: "Adidas Samba",
+    price: "7 500 FCFA",
+    category: "Sneakers",
+    brand: "Adidas",
+    sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45],
+    description: "Sneaker Adidas Samba pour un look moderne et épuré, idéal pour toutes les occasions.",
+    image: "/sneakersAdidas/samba1.jpeg",
+    gallery: ["/sneakersAdidas/samba2.jpeg", "/sneakersAdidas/samba3.jpeg", "/sneakersAdidas/samba4.jpeg", "/sneakersAdidas/samba_1.jpeg", "/sneakersAdidas/samba_2.jpeg"]
   },
   {
     id: 20,
