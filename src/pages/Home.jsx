@@ -53,8 +53,8 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { name: 'Sneakers Lifestyle', img: '/asshop5.JPG', tag: 'Street & Daily' },
-            { name: 'Running & Tech', img: '/asshop8.JPG', tag: 'Performance' },
-            { name: 'Rétro & Éditions', img: '/asshop9.JPG', tag: 'Collector' }
+            { name: 'Running & Tech', img: '/asshop11.JPG', tag: 'Performance' },
+            { name: 'Rétro & Éditions', img: '/asshop6.JPG', tag: 'Collector' }
           ].map((cat, i) => (
             <motion.div 
               key={i} whileHover={{ y: -10 }}
