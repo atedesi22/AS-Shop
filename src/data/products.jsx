@@ -122,38 +122,40 @@ export const products = [
     image: "/pantalon/jeanbleu.jpg",
     gallery: ["/pantalon/jeanbleu2.jpg", "/pantalon/jeanbleu5.jpg", "/pantalon/jeanbleu3.jpg", "/pantalon/jeanbleu4.jpg"]
   },
+
   {
     id: 12,
-    name: "Pantalon Mr. Tee",
-    price: "15 000 FCFA",
-    category: "Pantalons",
-    brand: "Puma",
-    sizes: [],
-    description: "Pantalon stylé avec la reference Mr. Tee, parfait pour compléter votre look.",
-    image: "/pantalon/pantalonmr.jpg",
-    gallery: ["/pantalon/pantalonmr.jpg", "/pantalon/pantalonmr3.jpg", "/pantalon/pantalonmr7.jpg", "/pantalon/pantalonmr4.jpg"]
+    name: "Adidas Campus",
+    price: "8 500 FCFA",
+    category: "Sneakers",
+    brand: "Adidas",
+    sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45],
+    description: "Sneaker Adidas Campus pour un look moderne et épuré, idéal pour toutes les occasions.",
+    image: "/sneakersAdidas/campus.jpg",
+    gallery: ["/sneakersAdidas/campus.jpg"]
   },
+
   {
     id: 13,
-    name: "Pantalon Mr. Tee",
-    price: "15 000 FCFA",
-    category: "Pantalons",
-    brand: "Puma",
-    sizes: [],
-    description: "Pantalon stylé avec la reference Mr. Tee, parfait pour compléter votre look.",
-    image: "/pantalon/pantalonmr5.jpg",
-    gallery: ["/pantalon/pantalonmr5.jpg", "/pantalon/pantalonmr6.jpg", "/pantalon/pantalonmr8.jpg", "/pantalon/pantalonmr9.jpg", "/pantalon/pantalonmr10.jpg"]
+    name: "Crampons Adidas",
+    price: "9 500 FCFA",
+    category: "Sneakers",
+    brand: "Adidas",
+    sizes: [ 40, 41, 42, 43, 44, 45],
+    description: "Sneaker Adidas pour un look moderne et épuré, idéal pour toutes les occasions.",
+    image: "/sneakersAdidas/crampons1.jpg",
+    gallery: ["/sneakersAdidas/crampons1.jpg", "/sneakersAdidas/crampons2.jpg", "/sneakersAdidas/crampons3.jpg"]
   },
   {
     id: 14,
-    name: "Jean DSQUARED2",
+    name: "Sneaker new balance",
     price: "15 000 FCFA",
-    category: "Pantalons",
-    brand: "Puma",
-    sizes: [],
-    description: "Pantalon DSQUARED pour un look utilitaire et tendance, idéal pour les sorties décontractées.",
-    image: "/pantalon/jeandsquared.jpg",
-    gallery: ["/pantalon/jeandsquared.jpg", "/pantalon/jeandsquared2.jpg"]
+    category: "Sneakers",
+    brand: "New Balance",
+    sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45],
+    description: "Sneaker New Balance pour un look moderne et épuré, idéal pour toutes les occasions.",
+    image: "/sneakersNewBalance/newbalance1.jpg",
+    gallery: ["/sneakersNewBalance/newbalance1.jpg", "/sneakersNewBalance/newbalance2.jpg", "/sneakersNewBalance/newbalance3.jpg"]
   },
 
   {
