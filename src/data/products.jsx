@@ -85,8 +85,8 @@ export const products = [
     brand: "Nike",
     sizes: [39, 40, 41, 42, 43, 44],
     description: "Sneaker Adidas pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/sneakersAdidas/sneakeradidas1.jpg",
-    gallery: ["/sneakersAdidas/sneakeradidas1.jpg", "/sneakersAdidas/sneakeradidas2.jpg", "/sneakersAdidas/sneakeradidas3.jpg"]
+    image: "/sneakersAdidas/sneakeradidas1.jpeg",
+    gallery: ["/sneakersAdidas/sneakeradidas1.jpeg", "/sneakersAdidas/sneakeradidas2.jpeg", "/sneakersAdidas/sneakeradidas3.jpeg"]
   },
 
   {
@@ -97,8 +97,8 @@ export const products = [
     brand: "Nike",
     sizes: [38, 39,40, 41, 42, 43, 44, 45],
     description: "Sneaker Nike Air Force 1 pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/sneakersAdidas/airforce1.jpg",
-    gallery: ["/sneakersAdidas/airforce1.jpg", "/sneakersAdidas/airforce2.jpg", "/sneakersAdidas/airforce3.jpg"]
+    image: "/sneakersAdidas/airforce1.jpeg",
+    gallery: ["/sneakersAdidas/airforce1.jpeg", "/sneakersAdidas/airforce2.jpeg", "/sneakersAdidas/airforce3.jpeg"]
   },
   {
     id: 10,
@@ -108,8 +108,8 @@ export const products = [
     brand: "Nike",
     sizes: [37, 38, 39, 40, 41, 42, 43],
     description: "Sneaker Nike Air Jordan 1 pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/sneakersNike/airforceJordan1.jpg",
-    gallery: ["/sneakersNike/airforceJordan1.jpg", "/sneakersNike/airforceJordan2.jpg", "/sneakersNike/airforceJordan3.jpg", "/sneakersNike/airforecemontante.jpg"]
+    image: "/sneakersNike/airforceJordan1.jpeg",
+    gallery: ["/sneakersNike/airforceJordan1.jpeg", "/sneakersNike/airforceJordan2.jpeg", "/sneakersNike/airforceJordan3.jpeg", "/sneakersNike/airforecemontante.jpeg"]
   },
   {
     id: 11,
@@ -119,8 +119,8 @@ export const products = [
     brand: "All-Star",
     sizes: [], // Pas de pointure pour les pantalons
     description: "Sneaker All-Star pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/allstar/allstar1.jpg",
-    gallery: ["/allstar/allstar1.jpg", "/allstar/allstar2.jpg"]
+    image: "/allstar/allstar1.jpeg",
+    gallery: ["/allstar/allstar1.jpeg", "/allstar/allstar2.jpeg"]
   },
 
   {
@@ -131,8 +131,8 @@ export const products = [
     brand: "Adidas",
     sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45],
     description: "Sneaker Adidas Campus pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/sneakersAdidas/campus.jpg",
-    gallery: ["/sneakersAdidas/campus.jpg"]
+    image: "/sneakersAdidas/campus.jpeg",
+    gallery: ["/sneakersAdidas/campus.jpeg"]
   },
 
   {
@@ -143,8 +143,8 @@ export const products = [
     brand: "Adidas",
     sizes: [ 40, 41, 42, 43, 44, 45],
     description: "Sneaker Adidas pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/sneakersAdidas/crampons1.jpg",
-    gallery: ["/sneakersAdidas/crampons1.jpg", "/sneakersAdidas/crampons2.jpg", "/sneakersAdidas/crampons3.jpg"]
+    image: "/sneakersAdidas/crampons1.jpeg",
+    gallery: ["/sneakersAdidas/crampons1.jpeg", "/sneakersAdidas/crampons2.jpeg", "/sneakersAdidas/crampons3.jpeg"]
   },
   {
     id: 14,
@@ -154,8 +154,8 @@ export const products = [
     brand: "New Balance",
     sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45],
     description: "Sneaker New Balance pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/sneakersNewBalance/newbalance1.jpg",
-    gallery: ["/sneakersNewBalance/newbalance1.jpg", "/sneakersNewBalance/newbalance2.jpg", "/sneakersNewBalance/newbalance3.jpg"]
+    image: "/sneakersNewBalance/newbalance1.jpeg",
+    gallery: ["/sneakersNewBalance/newbalance1.jpeg", "/sneakersNewBalance/newbalance2.jpeg", "/sneakersNewBalance/newbalance3.jpeg"]
   },
 
   {
@@ -166,8 +166,8 @@ export const products = [
     brand: "Puma",
     sizes: [],
     description: "Pantalon DSQUARED pour un look utilitaire et tendance, idéal pour les sorties décontractées.",
-    image: "/pantalon/jeandsquared.jpg",
-    gallery: ["/pantalon/jeandsquared.jpg", "/pantalon/jeandsquared2.jpg"]
+    image: "/pantalon/jeandsquared.jpeg",
+    gallery: ["/pantalon/jeandsquared.jpeg", "/pantalon/jeandsquared2.jpeg"]
   },
 
   {
