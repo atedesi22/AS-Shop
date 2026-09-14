@@ -234,7 +234,7 @@ export const products = [
     sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45],
     description: "Sneaker Adidas Stan Smith pour un look moderne et épuré, idéal pour toutes les occasions.",
     image: "/sneakersAdidas/stansmith1.jpeg",
-    gallery: ["/sneakersAdidas/stansmith1.jpeg", "/sneakersAdidas/stansmith2.jpeg"]
+    gallery: ["/sneakersAdidas/stansmith1.jpeg", "/sneakersAdidas/stansmith2.jpeg", "/sneakersAdidas/stansmith3.jpeg", "/sneakersAdidas/stansmith4.jpeg", "/sneakersAdidas/stansmith5.jpeg"]
   },
 
   {
