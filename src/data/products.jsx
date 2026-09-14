@@ -119,8 +119,8 @@ export const products = [
     brand: "All-Star",
     sizes: [], // Pas de pointure pour les pantalons
     description: "Sneaker All-Star pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/pantalon/jeanbleu.jpg",
-    gallery: ["/pantalon/jeanbleu2.jpg", "/pantalon/jeanbleu5.jpg", "/pantalon/jeanbleu3.jpg", "/pantalon/jeanbleu4.jpg"]
+    image: "/allstar/allstar1.jpg",
+    gallery: ["/allstar/allstar1.jpg", "/allstar/allstar2.jpg"]
   },
 
   {
@@ -149,7 +149,7 @@ export const products = [
   {
     id: 14,
     name: "Sneaker new balance",
-    price: "15 000 FCFA",
+    price: "9 000 FCFA",
     category: "Sneakers",
     brand: "New Balance",
     sizes: [37, 38, 39, 40, 41, 42, 43, 44, 45],
