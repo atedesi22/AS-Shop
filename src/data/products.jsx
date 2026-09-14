@@ -82,11 +82,11 @@ export const products = [
     name: "Sneaker adidas",
     price: "6 500 FCFA",
     category: "Sneakers",
-    brand: "Nike",
+    brand: "Adidas",
     sizes: [39, 40, 41, 42, 43, 44],
     description: "Sneaker Adidas pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/sneakersAdidas/sneakeradidas1.jpeg",
-    gallery: ["/sneakersAdidas/sneakeradidas1.jpeg", "/sneakersAdidas/sneakeradidas2.jpeg", "/sneakersAdidas/sneakeradidas3.jpeg"]
+    image: "/sneakersAdidas/sneakersadidas1.jpeg",
+    gallery: ["/sneakersAdidas/sneakersadidas1.jpeg", "/sneakersAdidas/sneakersadidas2.jpeg"]
   },
 
   {
