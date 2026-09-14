@@ -257,8 +257,8 @@ const ProductDetail = () => {
     `📦 *COMMANDE SOFT SHOES*\n\n` +
     `Article : ${product.name}\n` +
     `Prix : ${product.price}\n` +
-    `Image : ${BASE_URL}${mainImage}\n\n` + // Ajout de l'image ici
-    `Lien : ${BASE_URL}/product/${product.id}`
+    `Image du produit: ${BASE_URL}${mainImage}\n\n` + // Ajout de l'image ici
+    `Lien de notre boutique: ${BASE_URL}/product/${product.id}`
   )}`;
 
   return (
