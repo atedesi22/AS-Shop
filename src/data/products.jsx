@@ -97,8 +97,8 @@ export const products = [
     brand: "Nike",
     sizes: [38, 39,40, 41, 42, 43, 44, 45],
     description: "Sneaker Nike Air Force 1 pour un look moderne et épuré, idéal pour toutes les occasions.",
-    image: "/sneakersAdidas/airforce1.jpeg",
-    gallery: ["/sneakersAdidas/airforce1.jpeg", "/sneakersAdidas/airforce2.jpeg", "/sneakersAdidas/airforce3.jpeg"]
+    image: "/sneakersNike/airforce1.jpeg",
+    gallery: ["/sneakersNike/airforce1.jpeg", "/sneakersNike/airforce2.jpeg", "/sneakersNike/airforce3.jpeg"]
   },
   {
     id: 10,
