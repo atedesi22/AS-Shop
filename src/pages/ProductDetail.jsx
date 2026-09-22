@@ -253,7 +253,7 @@ const ProductDetail = () => {
 
   const BASE_URL = "https://as-shop-seven.vercel.app";
 
-  const whatsappLink = `https://wa.me/237694865872?text=${encodeURIComponent(
+  const whatsappLink = `https://wa.me/237651234779?text=${encodeURIComponent(
     `📦 *COMMANDE SOFT SHOES*\n\n` +
     `Article : ${product.name}\n` +
     `Prix : ${product.price}\n` +
