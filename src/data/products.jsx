@@ -249,17 +249,17 @@ export const products = [
     gallery: ["/sneakersAdidas/yeezy1.jpeg", "/sneakersAdidas/yeezy2.jpeg"]
   },
 
-  // {
-  //   id: 24,
-  //   name: "Nike Air Force 1 Blue",
-  //   price: "15 000 FCFA",
-  //   category: "Sneakers",
-  //   brand: "Nike",
-  //   sizes: [40, 41, 42, 43, 44, 45],
-  //   description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
-  //   image: "/sneakersNike/sneakerbleu3.jpg",
+  {
+    id: 23,
+    name: "Nike Air Force 1",
+    price: "9 500 FCFA",
+    category: "Sneakers",
+    brand: "Nike",
+    sizes: [40, 41, 42, 43, 44, 45],
+    description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
+    image: "/sneakersNike/nike1.jpg",
   //   gallery: ["/sneakersNike/sneakerbleu3.jpg", "/sneakersNike/sneakerbleu2.jpg", "/sneakersNike/sneakerbleu1.jpg"]
-  // },
+  },
   // {
   //   id: 25,
   //   name: "Nike Air Force 1 Brown",
