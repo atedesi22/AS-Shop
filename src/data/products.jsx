@@ -258,7 +258,7 @@ export const products = [
     sizes: [40, 41, 42, 43, 44, 45],
     description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
     image: "/sneakersNike/nike1.jpg",
-  //   gallery: ["/sneakersNike/sneakerbleu3.jpg", "/sneakersNike/sneakerbleu2.jpg", "/sneakersNike/sneakerbleu1.jpg"]
+    gallery: ["/sneakersNike/nike1.jpg"]
   },
   {
     id: 25,
@@ -283,7 +283,7 @@ export const products = [
     gallery: ["/allo/allo2.jpg", "/allo/allo1.jpg", "/allo/allo3.jpg", "/allo/allo4.jpg"]
   },
   {
-    id: 25,
+    id: 27,
     name: "Hermes",
     price: "7 500 FCFA",
     category: "Sneakers",
