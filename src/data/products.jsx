@@ -287,7 +287,7 @@ export const products = [
     name: "Hermes",
     price: "7 500 FCFA",
     category: "Sneakers",
-    brand: "Nike",
+    brand: "Hermes",
     sizes: [],
     description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
     image: "/hermes/hermes1.jpg",

@@ -8,4 +8,5 @@ export const brandsData = [
   { name: "Polo", logo: "/brands/jordan.JPG" },
   { name: "Vans", logo: "/brands/vans.JPG" },
   { name: "Allo", logo: "/brands/reebok.JPG" },
+  { name: "Hermes", logo: "/brands/hermes.JPG" },
 ];
