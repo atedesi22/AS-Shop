@@ -6,4 +6,6 @@ export const brandsData = [
   { name: "All-Star", logo: "/brands/adidas.JPG" },
   { name: "New Balance", logo: "/brands/nike.JPG" },
   { name: "Polo", logo: "/brands/jordan.JPG" },
+  { name: "Vans", logo: "/brands/vans.JPG" },
+  { name: "Allo", logo: "/brands/reebok.JPG" },
 ];

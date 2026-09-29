@@ -260,50 +260,50 @@ export const products = [
     image: "/sneakersNike/nike1.jpg",
   //   gallery: ["/sneakersNike/sneakerbleu3.jpg", "/sneakersNike/sneakerbleu2.jpg", "/sneakersNike/sneakerbleu1.jpg"]
   },
-  // {
-  //   id: 25,
-  //   name: "Nike Air Force 1 Brown",
-  //   price: "15 000 FCFA",
-  //   category: "Sneakers",
-  //   brand: "Nike",
-  //   sizes: [40, 41, 42, 43, 44],
-  //   description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
-  //   image: "/sneakersNike/sneakermarron1.jpg",
-  //   gallery: ["/sneakersNike/sneakermarron1.jpg", "/sneakersNike/sneakermarron2.jpg", "/sneakersNike/sneakermarron3.jpg"]
-  // },
-  // {
-  //   id: 26,
-  //   name: "Jean Fit bleu",
-  //   price: "15 000 FCFA",
-  //   category: "Pantalons",
-  //   brand: "Puma",
-  //   sizes: [], // Pas de pointure pour les pantalons
-  //   description: "Jean slim fit pour un look moderne et épuré, idéal pour toutes les occasions.",
-  //   image: "/pantalon/jeanbleu.jpg",
-  //   gallery: ["/pantalon/jeanbleu2.jpg", "/pantalon/jeanbleu5.jpg", "/pantalon/jeanbleu3.jpg", "/pantalon/jeanbleu4.jpg"]
-  // },
-  // {
-  //   id: 27,
-  //   name: "Jean Fit noir",
-  //   price: "15 000 FCFA",
-  //   category: "Pantalons",
-  //   brand: "Puma",
-  //   sizes: [],
-  //   description: "Jean slim fit noir pour un look moderne et épuré, idéal pour toutes les occasions.",
-  //   image: "/pantalon/jeannoir.jpg",
-  //   gallery: ["/pantalon/jeannoir.jpg", "/pantalon/jeannoir2.jpg"]
-  // },
-  // {
-  //   id: 28,
-  //   name: "Pantalon Mr. Tee",
-  //   price: "15 000 FCFA",
-  //   category: "Pantalons",
-  //   brand: "Puma",
-  //   sizes: [],
-  //   description: "Pantalon stylé avec la reference Mr. Tee, parfait pour compléter votre look.",
-  //   image: "/pantalon/pantalonmr.jpg",
-  //   gallery: ["/pantalon/pantalonmr.jpg", "/pantalon/pantalonmr3.jpg", "/pantalon/pantalonmr7.jpg", "/pantalon/pantalonmr4.jpg"]
-  // },
+  {
+    id: 25,
+    name: "VANS",
+    price: "7 000 FCFA",
+    category: "Sneakers",
+    brand: "Vans",
+    sizes: [40, 41, 42, 43, 44],
+    description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
+    image: "/vans/vans1.jpg",
+    gallery: ["/vans/vans1.jpg", "/vans/vans2.jpg", "/vans/vans3.jpg"]
+  },
+  {
+    id: 24,
+    name: "Allo",
+    price: "9 500 FCFA",
+    category: "Sneakers",
+    brand: "Puma",
+    sizes: [], // Pas de pointure pour les pantalons
+    description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
+    image: "/allo/allo1.jpg",
+    gallery: ["/allo/allo2.jpg", "/allo/allo1.jpg", "/allo/allo3.jpg", "/allo/allo4.jpg"]
+  },
+  {
+    id: 25,
+    name: "Hermes",
+    price: "7 500 FCFA",
+    category: "Sneakers",
+    brand: "Nike",
+    sizes: [],
+    description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
+    image: "/hermes/hermes1.jpg",
+    gallery: ["/hermes/hermes1.jpg", "/hermes/hermes2.jpg", "/hermes/hermes3.jpg", ],
+  },
+  {
+    id: 26,
+    name: "Sandales",
+    price: "13 000 FCFA",
+    category: "Sneakers",
+    brand: "Sandales",
+    sizes: [],
+    description: "Sandales stylées avec la reference Sandales, parfait pour compléter votre look.",
+    image: "/sandales/sandales1.jpg",
+    gallery: ["/sandales/sandales1.jpg", "/sandales/sandales2.jpg", "/sandales/sandales3.jpg", "/sandales/sandales4.jpg"]
+  },
   // {
   //   id: 29,
   //   name: "Pantalon Mr. Tee",
@@ -368,7 +368,7 @@ export const products = [
   //   category: "Pantalons",
   //   brand: "Puma",
   //   sizes: [], // Pas de pointure pour les pantalons
-  //   description: "Jean slim fit pour un look moderne et épuré, idéal pour toutes les occasions.",
+  //   description: "Confort premium avec une coupe oversized, parfait pour le style streetwear.",
   //   image: "/pantalon/jeanbleu.jpg",
   //   gallery: ["/pantalon/jeanbleu2.jpg", "/pantalon/jeanbleu5.jpg", "/pantalon/jeanbleu3.jpg", "/pantalon/jeanbleu4.jpg"]
   // },
